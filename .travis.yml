@@ -1,8 +1,8 @@
-# Travis CI (MIT License) configuration file for the Twenty'em Child Theme.
+# Travis CI (MIT License) configuration file for the MCE WP Theme.
 # @link https://travis-ci.org/
 
-# For use with the Twenty'em Child Theme.
-# @link https://github.com/rogertm/twenty-em-child
+# For use with the MCE WP Theme.
+# @link https://github.com/rogertm/mce
 
 # Ditch sudo and use containers.
 # @link http://docs.travis-ci.com/user/migrating-from-legacy/#Why-migrate-to-container-based-infrastructure%3F
