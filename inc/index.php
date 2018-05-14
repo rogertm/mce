@@ -6,7 +6,7 @@
  * @subpackage		MCE
  * @author			RogerTM
  * @license			license.txt
- * @link			https://themingisprose.com/twenty-em
+ * @link			https://excursionismocuba.com
  * @since 			MCE 1.0
  */
 
@@ -15,4 +15,5 @@
  */
 require( get_stylesheet_directory() . '/inc/functions.php' );
 require( get_stylesheet_directory() . '/inc/enqueue.php' );
+require( get_stylesheet_directory() . '/inc/post-types.php' );
 ?>
