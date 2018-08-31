@@ -42,7 +42,7 @@ function mce_post_types(){
 						 	  'singular'		=> _x( 'Postcard', 'post type singular name', 'mce' ),
 							  'plural'			=> _x( 'Postcards', 'post type general name', 'mce' ),
 							  'hierarchical'	=> false,
-							  'supports'		=> array( 'thumbnail', 'revisions', 'shortlinks' ),
+							  'supports'		=> array( 'excerpt', 'thumbnail', 'revisions', 'shortlinks' ),
 							  'rewrite'			=> _x( 'postcard', 'post type slug', 'mce' ),
 					),
 	);
@@ -67,8 +67,8 @@ function mce_post_types(){
 		$args = array(
 			'labels'				=> $labels,
 			'public'				=> true,
-			'exclude_from_search'	=> false,
-			'publicly_queryable'	=> true,
+			'exclude_from_search'	=> ( $pt['post-type'] != 'postcard' ) ? false : true,
+			'publicly_queryable'	=> ( $pt['post-type'] != 'postcard' ) ? true : false,
 			'show_ui'				=> true,
 			'show_in_nav_menus'		=> true,
 			'show_in_menu'			=> true,
@@ -76,7 +76,7 @@ function mce_post_types(){
 			'capability_type'		=> 'post',
 			'hierarchical'			=> $pt['hierarchical'],
 			'supports'				=> $pt['supports'],
-			'has_archive'			=> true,
+			'has_archive'			=> ( $pt['post-type'] != 'postcard' ) ? true : false,
 			'rewrite'				=> array( 'slug' => $pt['rewrite'] ),
 			'query_var'				=> true,
 			'can_export'			=> true,
