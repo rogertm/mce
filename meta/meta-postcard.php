@@ -93,4 +93,33 @@ function mce_save_postcard_data( $post_id ){
 	endif;
 }
 add_action( 'save_post', 'mce_save_postcard_data' );
+
+/**
+ * Add custom columns to Postcard screen
+ *
+ * @since MCE 1.0
+ */
+function mce_postcard_custom_columns( $custom_columns ){
+	$custom_columns['content']		= __( 'Content', 'mce' );
+	$custom_columns['thumbnail']	= __( 'Thumbnail', 'mce' );
+	return $custom_columns;
+}
+add_action( 'manage_postcard_posts_columns', 'mce_postcard_custom_columns' );
+
+/**
+ * Add the content to Postcard custom columns
+ *
+ * @since MCE 1.0
+ */
+function mce_postcard_content_columns( $columns_name, $id ){
+	if ( $columns_name == 'content' ) :
+		echo t_em_wrap_paragraph( get_post_field( 'post_excerpt', $id ) );
+	endif;
+	if ( $columns_name == 'thumbnail' ) :
+		if ( has_post_thumbnail( $id ) ) :
+			echo get_the_post_thumbnail( $id, array( 75, 75 ) );
+		endif;
+	endif;
+}
+add_action( 'manage_postcard_posts_custom_column', 'mce_postcard_content_columns', 10, 2 );
 ?>
