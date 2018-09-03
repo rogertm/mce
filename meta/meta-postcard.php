@@ -82,6 +82,7 @@ function mce_save_postcard_data( $post_id ){
 		$args = array(
 			'ID'			=> $post_id,
 			'post_title'	=> sprintf( _x( 'Postcard %s', 'Postcard title', 'mce' ), $post_id ),
+			'post_name'		=> sanitize_title( sprintf( _x( 'Postcard %s', 'Postcard title', 'mce' ), $post_id ) ),
 			'post_content'	=> trim( get_post_field( 'post_excerpt', $post_id ) ),
 			'post_excerpt'	=> trim( get_post_field( 'post_excerpt', $post_id ) ),
 		);
