@@ -13,7 +13,8 @@
 /**
  * Silents is gold... But we call the others
  */
-require( get_stylesheet_directory() . '/templates/post.php' );
 require( get_stylesheet_directory() . '/templates/route.php' );
+require( get_stylesheet_directory() . '/templates/chronicles.php' );
+require( get_stylesheet_directory() . '/templates/post.php' );
 require( get_stylesheet_directory() . '/templates/postcard.php' );
 ?>

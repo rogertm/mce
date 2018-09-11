@@ -120,6 +120,12 @@ function mce_list_terms( $tax ){
  */
 function mce_custom_terms(){
 	$custom_terms = array(
+		'term_cat_chronicles'	=> array(
+			'value'			=> 'term_cat_chronicles',
+			'label'			=> __( 'Term Category Chronicles', 'mce' ),
+			'public_label'	=> __( 'Chronicles', 'mce' ),
+			'tax'			=> 'category',
+		),
 		'term_degree_easy'	=> array(
 			'value'			=> 'term_degree_easy',
 			'label'			=> __( 'Term Degree Easy', 'mce' ),

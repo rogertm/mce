@@ -46,5 +46,5 @@ function mce_front_page_routes(){
 	</section>
 <?php
 }
-add_action( 't_em_action_custom_front_page_after', 'mce_front_page_routes', 5 );
+add_action( 't_em_action_custom_front_page_after', 'mce_front_page_routes' );
 ?>
