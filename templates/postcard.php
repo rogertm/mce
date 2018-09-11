@@ -11,11 +11,11 @@
  */
 
 /**
- * Postcard section
+ * Postcard section at front page
  *
  * @since MCE 1.0
  */
-function mce_postcard(){
+function mce_front_page_postcard(){
 	$args = array(
 		'post_type'			=> 'postcard',
 		'posts_per_page'	=> 1,
@@ -44,5 +44,5 @@ function mce_postcard(){
 	</section>
 <?php
 }
-add_action( 't_em_action_main_after', 'mce_postcard' );
+add_action( 't_em_action_main_after', 'mce_front_page_postcard' );
 ?>

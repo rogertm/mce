@@ -71,10 +71,10 @@ function mce_custom_pages(){
 			'user_menu'		=> '',
 			'type'			=> 'page',
 		),
-		'page_routs'	=> array(
-			'value'			=> 'page_routs',
-			'label'			=> __( 'Page Routs', 'mce' ),
-			'public_label'	=> __( 'Routs', 'mce' ),
+		'page_routes'	=> array(
+			'value'			=> 'page_routes',
+			'label'			=> __( 'Page Routes', 'mce' ),
+			'public_label'	=> __( 'Routes', 'mce' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
 		),
@@ -123,25 +123,25 @@ function mce_custom_terms(){
 		'term_degree_easy'	=> array(
 			'value'			=> 'term_degree_easy',
 			'label'			=> __( 'Term Degree Easy', 'mce' ),
-			'public_label'	=> __( 'Degree Easy', 'mce' ),
+			'public_label'	=> __( 'Easy', 'mce' ),
 			'tax'			=> 'degree',
 		),
 		'term_degree_middle'	=> array(
 			'value'			=> 'term_degree_middle',
 			'label'			=> __( 'Term Degree Middle', 'mce' ),
-			'public_label'	=> __( 'Degree Middle', 'mce' ),
+			'public_label'	=> __( 'Middle', 'mce' ),
 			'tax'			=> 'degree',
 		),
 		'term_degree_difficult'	=> array(
 			'value'			=> 'term_degree_difficult',
 			'label'			=> __( 'Term Degree Difficult', 'mce' ),
-			'public_label'	=> __( 'Degree Difficult', 'mce' ),
+			'public_label'	=> __( 'Difficult', 'mce' ),
 			'tax'			=> 'degree',
 		),
 		'term_degree_extreme'	=> array(
 			'value'			=> 'term_degree_extreme',
 			'label'			=> __( 'Term Degree Extreme', 'mce' ),
-			'public_label'	=> __( 'Degree Extreme', 'mce' ),
+			'public_label'	=> __( 'Extreme', 'mce' ),
 			'tax'			=> 'degree',
 		),
 	);

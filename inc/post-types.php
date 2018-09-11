@@ -96,7 +96,7 @@ function mce_post_types(){
 			'show_admin_column'		=> true,
 			'update_count_callback'	=> '_update_post_term_count',
 			'query_var'				=> true,
-			'rewrite'				=> array( 'slug' => 'degree' ),
+			'rewrite'				=> array( 'slug' => 'route-degree' ),
 		),
 	);
 
