@@ -33,9 +33,9 @@ function mce_latests_post(){
 	);
 	$wp_query = new WP_Query( $args );
 ?>
-	<section id="latest-posts" class="my-5">
+	<section id="latest-posts" class="my-10">
 		<div class="<?php t_em_container() ?>">
-			<h3 class="text-center"><?php _e( 'Latests Blog Entries', 'mce' ) ?></h3>
+			<h2 class="text-center h1 mb-6"><?php _e( 'Latests Blog Entries', 'mce' ) ?></h2>
 <?php
 		if ( $wp_query->have_posts() ) :
 			while ( $wp_query->have_posts() ) :
@@ -70,6 +70,5 @@ function mce_latests_post(){
 	</section>
 <?php
 }
-// add_action( 't_em_action_custom_front_page_after', 'mce_latests_post' );
 add_action( 't_em_action_main_after', 'mce_latests_post' );
 ?>

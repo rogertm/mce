@@ -19,7 +19,8 @@ function mce_front_page_chronicle(){
 	if ( ! is_front_page() || ! t_em( 'term_cat_chronicles' ) )
 		return;
 
-	$term = t_em( 'term_cat_chronicles' );
+	$term		= t_em( 'term_cat_chronicles' );
+	$term_data	= get_term( $term, 'category' );
 	$args = array(
 		'post_type'			=> 'post',
 		'posts_per_page'	=> 1,
@@ -31,7 +32,7 @@ function mce_front_page_chronicle(){
 			),
 		),
 	);
-	$chronicles				= get_posts( $args );
+	$chronicles	= get_posts( $args );
 
 	if ( ! $chronicles )
 		return;
@@ -47,9 +48,13 @@ function mce_front_page_chronicle(){
 	);
 	$style			= join( $style );
 ?>
-	<section id="chronicle-<?php echo $id ?>" class="chronicle bg-holder d-flex align-items-center" data-width="<?php echo $meta['width'] ?>" data-height="<?php echo $meta['height'] ?>" style="<?php echo $style ?>">
+	<section id="chronicle-<?php echo $id ?>" class="chronicle bg-holder text-light mb-7 d-flex align-items-end" data-width="<?php echo $meta['width'] ?>" data-height="<?php echo $meta['height'] ?>" style="<?php echo $style ?>">
 		<div class="chronicle-body <?php t_em_container() ?>">
-			<blockquote class="blockquote"><h3 class="h1"><?php echo $chronicle->post_title ?></h3></blockquote>
+			<div class="<?php echo t_em_grid( 8 ) ?> mb-7">
+				<h3 class="h1"><span class="d-block h6"><?php echo $term_data->name ?><hr class="bg-light"></span><?php echo $chronicle->post_title ?></h3>
+				<?php echo t_em_wrap_paragraph( t_em_get_post_excerpt( $chronicle->ID, false ) ) ?>
+				<p><a href="<?php get_permalink( $chronicle->ID ) ?>"><?php _e( 'Read more', 'mce' ) ?></a></p>
+			</div>
 		</div>
 	</section>
 <?php

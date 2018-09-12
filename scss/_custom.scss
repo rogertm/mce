@@ -2,3 +2,18 @@
 
 // Your variable overrides
 $icomoon-font-path: 		"../../twenty-em/fonts";
+
+// Fonts
+$font-family-sans-serif:	"Lato";
+$headings-font-family:		"Dosis";
+
+// Spacers
+$spacer:					1rem;
+$spacers: (
+	6: ($spacer * 6),
+	7: ($spacer * 7),
+	8: ($spacer * 8),
+	9: ($spacer * 9),
+	10: ($spacer * 10),
+	15: ($spacer * 15)
+)

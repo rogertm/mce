@@ -42,10 +42,18 @@ function mce_front_page_postcard(){
 		'background-size:cover;',
 	);
 	$style			= join( $style );
+	$source			= ( get_post_meta( $id, 'postcard_source', true ) ) ? '<footer class="blockquote-footer font-italic text-light">'. get_post_meta( $id, 'postcard_source', true ) .'</footer>' : null;
+	$photo_by		= ( get_post_meta( $id, 'postcard_photo_by', true ) ) ? '<div class="mb-5">'. sprintf( __( 'Photo by: %s', 'mce' ), get_post_meta( $id, 'postcard_photo_by', true ) ) .'</div>' : null;
 ?>
-	<section id="postcard-<?php echo $id ?>" class="postcard bg-holder d-flex align-items-center" data-width="<?php echo $meta['width'] ?>" data-height="<?php echo $meta['height'] ?>" style="<?php echo $style ?>">
+	<section id="postcard-<?php echo $id ?>" class="postcard bg-holder text-light d-flex align-items-end justify-content-end" data-width="<?php echo $meta['width'] ?>" data-height="<?php echo $meta['height'] ?>" style="<?php echo $style ?>">
 		<div class="postcard-body <?php t_em_container() ?>">
-			<blockquote class="blockquote"><h3 class="h1"><?php echo $postcard->post_content ?></h3></blockquote>
+			<div class="<?php echo t_em_grid( 8 ) ?> offset-lg-4 mb-7">
+				<blockquote class="blockquote text-right">
+					<p class="h1"><?php echo $postcard->post_content ?></p>
+					<?php echo $source ?>
+				</blockquote>
+			</div>
+			<?php echo $photo_by ?>
 		</div>
 	</section>
 <?php

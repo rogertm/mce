@@ -5,3 +5,107 @@
 //
 @import "custom";
 @import "../../twenty-em/scss/theme";
+
+//
+// Scaffolding
+//
+*:hover{
+	transition: 250ms;
+}
+body{
+	&:not(.home){
+		#main{
+			@extend .mt-7;
+		}
+	}
+	&.admin-bar{
+		#top-menu{
+			top: 30px;
+		}
+	}
+	cursor: default;
+}
+.btn{
+	font-family: $headings-font-family;
+}
+#main{
+	@extend .my-0;
+}
+
+//
+// Navigation
+//
+#top-menu{
+	@extend .fixed-top;
+	.navbar{
+		*{
+			font-family: $headings-font-family;
+		}
+		&-nav{
+			@extend .ml-auto;
+		}
+	}
+}
+
+//
+// Header
+//
+#static-header{
+	@extend .text-center;
+	&-inner{
+		@extend .d-flex;
+		@extend .align-items-center;
+		background-attachment: fixed;
+		background-blend-mode: multiply;
+	}
+	&-text{
+		header h2{
+			@extend .display-4;
+		}
+		.static-header-content{
+			@extend .h2;
+		}
+	}
+	.actions{
+		@extend .mt-7;
+		.btn{
+			@extend .btn-outline-light;
+			@extend .btn-lg;
+		}
+	}
+}
+
+//
+// Front Page
+//
+#featured-widget-area{
+	@extend .text-center;
+	@extend .my-5;
+}
+#front-page-widget{
+	&-one{
+		@extend .bg-transparent;
+		p{
+			@extend .lead;
+		}
+	}
+}
+.bg-holder{
+	background-blend-mode: multiply;
+	@extend .bg-secondary;
+}
+.testimonial,
+.route{
+	background-color: $gray-200;
+}
+
+//
+// Footer
+//
+#colophon{
+	@extend .bg-light;
+	@extend .py-7;
+}
+#site-info{
+	background-color: $gray-200;
+}

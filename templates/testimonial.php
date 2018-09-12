@@ -27,26 +27,28 @@ function mce_testimonials(){
 
 	$count = count( $testimonials );
 ?>
-	<section id="testimonials" class="<?php t_em_container() ?> testimonial my-5 text-center">
-		<h3 class="testimonial-headline"><?php _e( 'Testimonials', 'mce' ) ?></h3>
-		<div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
-			<ol class="carousel-indicators">
-			<?php $i = 0; while ( $i < $count ) : ?>
-				<li data-target="#testimonials-carousel" data-slide-to="<?php echo $i ?>"></li>
-			<?php $i++; endwhile; ?>
-			</ol>
-			<div class="carousel-inner">
-			<?php foreach ( $testimonials as $testimonial ) : ?>
-				<div class="carousel-item testimonial-item">
-					<div class="testimonial-body lead mx-lg-5">
-						<?php echo $testimonial->post_content ?>
+	<section id="testimonials" class="testimonial mt-7 mb-0 py-7 text-center">
+		<div class="<?php t_em_container() ?>">
+			<h3 class="testimonial-headline"><?php _e( 'Testimonials', 'mce' ) ?></h3>
+			<div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+				<?php $i = 0; while ( $i < $count ) : ?>
+					<li data-target="#testimonials-carousel" data-slide-to="<?php echo $i ?>"></li>
+				<?php $i++; endwhile; ?>
+				</ol>
+				<div class="carousel-inner">
+				<?php foreach ( $testimonials as $testimonial ) : ?>
+					<div class="carousel-item testimonial-item">
+						<div class="testimonial-body lead mx-lg-5">
+							<?php echo $testimonial->post_content ?>
+						</div>
+						<div class="testimonial-footer d-flex justify-content-center">
+							<?php echo get_the_post_thumbnail( $testimonial->ID, 'thumbnail', array( 'class' => 'd-block rounded-circle' ) ) ?>
+							<h3 class="testimonial-name mt-5 ml-3"><?php echo $testimonial->post_title ?></h3>
+						</div>
 					</div>
-					<div class="testimonial-footer d-flex justify-content-center">
-						<?php echo get_the_post_thumbnail( $testimonial->ID, 'thumbnail', array( 'class' => 'd-block rounded-circle' ) ) ?>
-						<h3 class="testimonial-name mt-5 ml-3"><?php echo $testimonial->post_title ?></h3>
-					</div>
+				<?php endforeach; ?>
 				</div>
-			<?php endforeach; ?>
 			</div>
 		</div>
 	</section>
