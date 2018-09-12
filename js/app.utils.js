@@ -18,6 +18,20 @@ jQuery(document).ready(function($) {
 	}
 	mce_fullscreen_hero();
 
+	// Make slider items the same high
+	function mce_item_hight(){
+		var values	= []
+			item 	= $('#testimonials-carousel .carousel-item');
+		item.each(function(index){
+			var item_hight = $(this).height();
+			values.push(item_hight);
+		});
+		values.sort();
+		var value = values.pop() + 25;
+		item.css( 'min-height', value );
+	};
+	mce_item_hight();
+
 	// Parallax-Scroll
 	$('.bg-holder').parallaxScroll({
 		friction: 0.2
@@ -26,5 +40,6 @@ jQuery(document).ready(function($) {
 	// Run function on resize
 	$(window).resize(function(){
 		mce_fullscreen_hero();
+		mce_item_hight();
 	});
 });
