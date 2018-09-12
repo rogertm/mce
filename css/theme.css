@@ -31,7 +31,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Lato";
+  --font-family-sans-serif: "Lato", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *,
@@ -54,7 +54,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -299,7 +299,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, #static-header-text .static-header-content, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Dosis";
+  font-family: "Dosis", sans-serif;
   font-weight: 500;
   line-height: 1.2;
   color: inherit; }
@@ -4349,7 +4349,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4434,7 +4434,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -10025,10 +10025,10 @@ body {
 
 .btn, #commentform .submit, #comments .comment-reply-link,
 #comments #cancel-comment-reply-link {
-  font-family: "Dosis"; }
+  font-family: "Dosis", sans-serif; }
 
 #top-menu .navbar * {
-  font-family: "Dosis"; }
+  font-family: "Dosis", sans-serif; }
 
 #static-header-inner {
   background-attachment: fixed;
