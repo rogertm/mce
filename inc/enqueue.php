@@ -21,6 +21,9 @@ function mce_enqueue(){
 
 	wp_register_script( 'child-app-utils', t_em_get_js( 'app.utils', T_EM_CHILD_THEME_DIR_PATH .'/js', T_EM_CHILD_THEME_DIR_URL .'/js' ), array( 'jquery' ), t_em_theme( 'Version' ), true );
 	wp_enqueue_script( 'child-app-utils' );
+
+	wp_register_script( 'jquery.parallax-scroll', t_em_get_js( 'jquery.parallax-scroll', T_EM_CHILD_THEME_DIR_PATH .'/js', T_EM_CHILD_THEME_DIR_URL .'/js' ), array( 'jquery' ), t_em_theme( 'Version' ), true );
+	wp_enqueue_script( 'jquery.parallax-scroll' );
 }
 add_action( 'wp_enqueue_scripts', 'mce_enqueue' );
 

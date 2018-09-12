@@ -35,11 +35,17 @@ function mce_front_page_postcard(){
 	$id				= $postcard->ID;
 	$thumbnail_id	= get_post_meta( $id, '_thumbnail_id', true );
 	$thumbnail_url	= wp_get_attachment_url( $thumbnail_id );
+	$meta 			= wp_get_attachment_metadata( $thumbnail_id );
+	$style			= array(
+		'background-image:url('. $thumbnail_url .');',
+		'background-repeat:no-repeat;',
+		'background-size:cover;',
+	);
+	$style			= join( $style );
 ?>
-	<section id="postcard-<?php echo $id ?>" class="postcard card">
-		<img src="<?php echo $thumbnail_url ?>" class="card-img" alt="<?php echo $postcard->post_content ?>">
-		<div class="postcard-body card-img-overlay d-flex align-items-center <?php t_em_container() ?>">
-			<blockquote class="blockquote card-body"><h3 class="h1"><?php echo $postcard->post_content ?></h3></blockquote>
+	<section id="postcard-<?php echo $id ?>" class="postcard bg-holder d-flex align-items-center" data-width="<?php echo $meta['width'] ?>" data-height="<?php echo $meta['height'] ?>" style="<?php echo $style ?>">
+		<div class="postcard-body <?php t_em_container() ?>">
+			<blockquote class="blockquote"><h3 class="h1"><?php echo $postcard->post_content ?></h3></blockquote>
 		</div>
 	</section>
 <?php
