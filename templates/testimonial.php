@@ -29,7 +29,7 @@ function mce_testimonials(){
 ?>
 	<section id="testimonials" class="testimonial mt-7 mb-0 py-7 text-center">
 		<div class="<?php t_em_container() ?>">
-			<h3 class="testimonial-headline mb-4"><?php _e( 'Testimonials', 'mce' ) ?></h3>
+			<h2 class="testimonial-headline mb-4"><?php _e( 'Testimonials', 'mce' ) ?></h2>
 			<div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
 				<ol class="carousel-indicators">
 				<?php $i = 0; while ( $i < $count ) : ?>

@@ -47,7 +47,7 @@ function mce_front_page_postcard(){
 ?>
 	<section id="postcard-<?php echo $id ?>" class="postcard bg-holder text-light d-flex align-items-end justify-content-end" data-width="<?php echo $meta['width'] ?>" data-height="<?php echo $meta['height'] ?>" style="<?php echo $style ?>">
 		<div class="postcard-body <?php t_em_container() ?>">
-			<div class="<?php echo t_em_grid( 8 ) ?> offset-lg-4 mb-7">
+			<div class="<?php echo t_em_grid( 8 ) .' '. t_em_grid( 4, '', true ) ?> mb-7">
 				<blockquote class="blockquote text-right">
 					<p class="h1"><?php echo $postcard->post_content ?></p>
 					<?php echo $source ?>

@@ -150,6 +150,24 @@ function mce_custom_terms(){
 			'public_label'	=> __( 'Extreme', 'mce' ),
 			'tax'			=> 'degree',
 		),
+		'term_zone_occidental'	=> array(
+			'value'			=> 'term_zone_occidental',
+			'label'			=> __( 'Term Zone Occidental', 'mce' ),
+			'public_label'	=> __( 'Occidental', 'mce' ),
+			'tax'			=> 'zone',
+		),
+		'term_zone_central'	=> array(
+			'value'			=> 'term_zone_central',
+			'label'			=> __( 'Term Zone Central', 'mce' ),
+			'public_label'	=> __( 'Central', 'mce' ),
+			'tax'			=> 'zone',
+		),
+		'term_zone_oriental'	=> array(
+			'value'			=> 'term_zone_oriental',
+			'label'			=> __( 'Term Zone Oriental', 'mce' ),
+			'public_label'	=> __( 'Oriental', 'mce' ),
+			'tax'			=> 'zone',
+		),
 	);
 	return apply_filters( 'mce_admin_filter_custom_terms', $custom_terms );
 }
