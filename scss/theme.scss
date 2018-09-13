@@ -94,9 +94,11 @@ body{
 	background-blend-mode: multiply;
 	@extend .bg-secondary;
 }
-.testimonial,
-.route{
-	background-color: $gray-200;
+.home{
+	.testimonial,
+	.route{
+		background-color: $gray-200;
+	}
 }
 
 //

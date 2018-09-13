@@ -29,7 +29,7 @@ function mce_testimonials(){
 ?>
 	<section id="testimonials" class="testimonial mt-7 mb-0 py-7 text-center">
 		<div class="<?php t_em_container() ?>">
-			<h3 class="testimonial-headline"><?php _e( 'Testimonials', 'mce' ) ?></h3>
+			<h3 class="testimonial-headline mb-4"><?php _e( 'Testimonials', 'mce' ) ?></h3>
 			<div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
 				<ol class="carousel-indicators">
 				<?php $i = 0; while ( $i < $count ) : ?>
@@ -39,7 +39,7 @@ function mce_testimonials(){
 				<div class="carousel-inner">
 				<?php foreach ( $testimonials as $testimonial ) : ?>
 					<div class="carousel-item testimonial-item">
-						<div class="testimonial-body lead mx-lg-5">
+						<div class="testimonial-body lead mx-lg-10">
 							<?php echo $testimonial->post_content ?>
 						</div>
 						<div class="testimonial-footer d-flex justify-content-center">
@@ -49,6 +49,14 @@ function mce_testimonials(){
 					</div>
 				<?php endforeach; ?>
 				</div>
+				<a class="carousel-control-prev" href="#testimonials-carousel" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only"><?php _e( 'Previous', 'mce' ) ?></span>
+				</a>
+				<a class="carousel-control-next" href="#testimonials-carousel" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only"><?php _e( 'Next', 'mce' ) ?></span>
+				</a>
 			</div>
 		</div>
 	</section>

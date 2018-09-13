@@ -98,6 +98,17 @@ function mce_post_types(){
 			'query_var'				=> true,
 			'rewrite'				=> array( 'slug' => 'route-degree' ),
 		),
+		'zone'	=> array(
+			'post_type'				=> array( 'route' ),
+			'singular'				=> _x( 'Zone', 'taxonomy singular name', 'mce' ),
+			'plural'				=> _x( 'Zones', 'taxonomy general name', 'mce' ),
+			'hierarchical'			=> true,
+			'show_ui'				=> true,
+			'show_admin_column'		=> true,
+			'update_count_callback'	=> '_update_post_term_count',
+			'query_var'				=> true,
+			'rewrite'				=> array( 'slug' => 'route-zone' ),
+		),
 	);
 
 	foreach ( $taxonomies as $taxonomy => $tax ) :

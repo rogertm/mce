@@ -10037,8 +10037,8 @@ body {
 .bg-holder {
   background-blend-mode: multiply; }
 
-.testimonial,
-.route {
+.home .testimonial,
+.home .route {
   background-color: #e9ecef; }
 
 #site-info {
