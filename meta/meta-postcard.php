@@ -11,7 +11,7 @@
  */
 
 /**
- * Postcard data fields
+ * Postcard Data Fields
  * @return array 	Array of fields
  *
  * @since MCE 1.0
