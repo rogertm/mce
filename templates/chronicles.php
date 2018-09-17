@@ -48,7 +48,7 @@ function mce_front_page_chronicle(){
 	);
 	$style			= join( $style );
 ?>
-	<section id="chronicle-<?php echo $id ?>" class="chronicle bg-holder text-light mb-7 d-flex align-items-end" data-width="<?php echo $meta['width'] ?>" data-height="<?php echo $meta['height'] ?>" style="<?php echo $style ?>">
+	<section id="chronicle-<?php echo $id ?>" class="chronicle hero bg-holder text-light mb-7 d-flex align-items-end" data-width="<?php echo $meta['width'] ?>" data-height="<?php echo $meta['height'] ?>" style="<?php echo $style ?>">
 		<div class="chronicle-body <?php t_em_container() ?>">
 			<div class="<?php echo t_em_grid( 8 ) ?> mb-7">
 				<span class="d-block h6"><?php echo $term_data->name ?><hr class="bg-light"></span>

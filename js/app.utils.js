@@ -11,12 +11,21 @@
 jQuery(document).ready(function($) {
 	// Hero Full Screen
 	function mce_fullscreen_hero(){
-		$('.home #static-header-inner, .bg-holder').css({
+		$('.home #static-header-inner, .hero.bg-holder').css({
 			width: $(window).width(),
 			height: $(window).height(),
 		});
 	}
 	mce_fullscreen_hero();
+
+	// Singular Hero
+	function mce_singular_hero(){
+		$('.singular-hero.bg-full').css({
+			width: $(window).width(),
+			height: $(window).height() / 1.5,
+		});
+	}
+	mce_singular_hero();
 
 	// Make slider items the same high
 	function mce_item_hight(){
@@ -40,6 +49,7 @@ jQuery(document).ready(function($) {
 	// Run function on resize
 	$(window).resize(function(){
 		mce_fullscreen_hero();
+		mce_singular_hero();
 		mce_item_hight();
 	});
 });
