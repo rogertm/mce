@@ -11,21 +11,21 @@
 jQuery(document).ready(function($) {
 	// Hero Full Screen
 	function mce_fullscreen_hero(){
-		$('.home #static-header-inner, .hero.bg-holder').css({
-			width: $(window).width(),
-			height: $(window).height(),
+		$('.home #static-header-inner, .hero').css({
+			'width': $(window).width(),
+			'height': $(window).height(),
+		});
+		$('.singular-hero.bg-full').css({
+			'width': $(window).width(),
+			'min-height': $(window).height() / 1.5,
+			'height': 'auto',
+		});
+		$('.singular-hero.bg-empty').css({
+			'width': $(window).width(),
+			'height': 'auto',
 		});
 	}
 	mce_fullscreen_hero();
-
-	// Singular Hero
-	function mce_singular_hero(){
-		$('.singular-hero.bg-full').css({
-			width: $(window).width(),
-			height: $(window).height() / 1.5,
-		});
-	}
-	mce_singular_hero();
 
 	// Make slider items the same high
 	function mce_item_hight(){
@@ -41,15 +41,9 @@ jQuery(document).ready(function($) {
 	};
 	mce_item_hight();
 
-	// Parallax-Scroll
-	$('.bg-holder').parallaxScroll({
-		friction: 0.2
-	});
-
 	// Run function on resize
 	$(window).resize(function(){
 		mce_fullscreen_hero();
-		mce_singular_hero();
 		mce_item_hight();
 	});
 });

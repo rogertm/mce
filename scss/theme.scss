@@ -90,15 +90,24 @@ body{
 		}
 	}
 }
-.bg-holder{
-	background-blend-mode: multiply;
-	@extend .bg-secondary;
-}
 .home{
 	.testimonial,
 	.route{
 		background-color: $gray-200;
 	}
+}
+
+//
+// Singular
+//
+.hero,
+.singular-hero{
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-blend-mode: multiply;
+	@extend .bg-secondary;
 }
 
 //

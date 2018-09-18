@@ -42,13 +42,9 @@ function mce_front_page_chronicle(){
 	$thumbnail_id	= get_post_meta( $id, '_thumbnail_id', true );
 	$thumbnail_url	= wp_get_attachment_url( $thumbnail_id );
 	$meta 			= wp_get_attachment_metadata( $thumbnail_id );
-	$style			= array(
-		'background-image:url('. $thumbnail_url .');',
-		'background-repeat:no-repeat;',
-	);
-	$style			= join( $style );
+	$style			= 'background-image:url('. $thumbnail_url .');';
 ?>
-	<section id="chronicle-<?php echo $id ?>" class="chronicle hero bg-holder text-light mb-7 d-flex align-items-end" data-width="<?php echo $meta['width'] ?>" data-height="<?php echo $meta['height'] ?>" style="<?php echo $style ?>">
+	<section id="chronicle-<?php echo $id ?>" class="chronicle hero text-light mb-7 d-flex align-items-end" style="<?php echo $style ?>">
 		<div class="chronicle-body <?php t_em_container() ?>">
 			<div class="<?php echo t_em_grid( 8 ) ?> mb-7">
 				<span class="d-block h6"><?php echo $term_data->name ?><hr class="bg-light"></span>

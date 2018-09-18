@@ -4757,14 +4757,19 @@ button.bg-primary:hover,
 button.bg-primary:focus {
   background-color: #0062cc !important; }
 
-.bg-secondary, .bg-holder {
+.bg-secondary, .hero,
+.singular-hero {
   background-color: #6c757d !important; }
 
-a.bg-secondary:hover, a.bg-holder:hover, a.bg-secondary:focus, a.bg-holder:focus,
+a.bg-secondary:hover, a.hero:hover,
+a.singular-hero:hover, a.bg-secondary:focus, a.hero:focus,
+a.singular-hero:focus,
 button.bg-secondary:hover,
-button.bg-holder:hover,
+button.hero:hover,
+button.singular-hero:hover,
 button.bg-secondary:focus,
-button.bg-holder:focus {
+button.hero:focus,
+button.singular-hero:focus {
   background-color: #545b62 !important; }
 
 .bg-success {
@@ -10034,12 +10039,17 @@ body {
   background-attachment: fixed;
   background-blend-mode: multiply; }
 
-.bg-holder {
-  background-blend-mode: multiply; }
-
 .home .testimonial,
 .home .route {
   background-color: #e9ecef; }
+
+.hero,
+.singular-hero {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply; }
 
 #site-info {
   background-color: #e9ecef; }

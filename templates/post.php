@@ -84,17 +84,12 @@ function mce_singular_header(){
 	$thumbnail_id 	= get_post_meta( get_the_ID(), '_thumbnail_id', true );
 	$thumbnail_url	= ( $thumbnail_id ) ? t_em_image_resize( 2048, 1152, $thumbnail_id, false ) : null;
 	$meta 			= ( $thumbnail_id ) ? wp_get_attachment_metadata( $thumbnail_id ) : null;
-	$style			= array(
-		'background-image:url('. $thumbnail_url .');',
-		'background-size:cover;',
-		'background-repeat:no-repeat;',
-	);
-	$style			= ( $thumbnail_id ) ? join( $style ) : null;
+	$style			= ( $thumbnail_id ) ? 'background-image:url('. $thumbnail_url .');' : null;
 	$bg				= ( ! $thumbnail_id ) ? 'bg-empty' : 'bg-full';
 
 	$excerpt 		= ( ! is_page_template( 'page-templates/template-blog-excerpt.php' ) && ! is_page_template( 'page-templates/mce-custom-page-template.php' ) ) ? get_post_field( 'post_excerpt' ) : get_post_field( 'post_content' );
 ?>
-	<div id="header-<?php the_ID() ?>" class="singular-hero py-7 bg-holder text-light d-flex align-items-center <?php echo $bg ?>" data-width="<?php echo $meta['width'] ?>" data-height="<?php echo $meta['height'] ?>" style="<?php echo $style ?>">
+	<div id="header-<?php the_ID() ?>" class="singular-hero py-7 text-light d-flex align-items-center <?php echo $bg ?>" style="<?php echo $style ?>">
 		<div class="<?php t_em_container() ?> text-center">
 			<h1 class="entry-title display-3"><?php the_title() ?></h1>
 			<div class="lead px-7"><?php echo t_em_wrap_paragraph( $excerpt ) ?></div>
