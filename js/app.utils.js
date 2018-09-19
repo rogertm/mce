@@ -41,6 +41,25 @@ jQuery(document).ready(function($) {
 	};
 	mce_item_hight();
 
+	// Fancybox
+	$().fancybox({
+		selector: '.gallery .gallery-item',
+		infobar: false,
+		smallBtn: false,
+		closeExisting: true,
+		loop: true,
+		toolbar: true,
+		buttons: [
+			"zoom",
+			"share",
+			"slideShow",
+			"fullScreen",
+			"download",
+			"thumbs",
+			"close"
+		],
+	});
+
 	// Run function on resize
 	$(window).resize(function(){
 		mce_fullscreen_hero();

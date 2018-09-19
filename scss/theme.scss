@@ -120,3 +120,15 @@ body{
 #site-info{
 	background-color: $gray-200;
 }
+
+//
+// Fancybox
+//
+.fancybox{
+	&-stage{
+		background-color: #000;
+	}
+	&-content{
+		@extend .bg-transparent;
+	}
+}

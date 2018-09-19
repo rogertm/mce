@@ -85,14 +85,28 @@ function mce_singular_header(){
 	$thumbnail_url	= ( $thumbnail_id ) ? t_em_image_resize( 2048, 1152, $thumbnail_id, false ) : null;
 	$meta 			= ( $thumbnail_id ) ? wp_get_attachment_metadata( $thumbnail_id ) : null;
 	$style			= ( $thumbnail_id ) ? 'background-image:url('. $thumbnail_url .');' : null;
-	$bg				= ( ! $thumbnail_id ) ? 'bg-empty' : 'bg-full';
-
-	$excerpt 		= ( ! is_page_template( 'page-templates/template-blog-excerpt.php' ) && ! is_page_template( 'page-templates/mce-custom-page-template.php' ) ) ? get_post_field( 'post_excerpt' ) : get_post_field( 'post_content' );
+	$bg				= ( $thumbnail_id ) ? 'bg-full' : 'bg-empty';
+	$excerpt 		= ( get_post_field( 'post_excerpt' ) ) ? '<div class="lead px-7">'. t_em_wrap_paragraph( get_post_field( 'post_excerpt' ) ) .'</div>' : null;
 ?>
-	<div id="header-<?php the_ID() ?>" class="singular-hero py-7 text-light d-flex align-items-center <?php echo $bg ?>" style="<?php echo $style ?>">
+	<div id="header-<?php the_ID() ?>" class="singular-hero text-light d-flex align-items-center <?php echo $bg ?>" style="<?php echo $style ?>">
 		<div class="<?php t_em_container() ?> text-center">
-			<h1 class="entry-title display-3"><?php the_title() ?></h1>
-			<div class="lead px-7"><?php echo t_em_wrap_paragraph( $excerpt ) ?></div>
+			<header class="py-7">
+				<h1 class="display-3"><?php the_title() ?></h1>
+				<?php echo $excerpt ?>
+			</header>
+			<?php if ( ! is_page() ) : ?>
+			<div class="text-center h3">
+				<a href="<?php echo wp_get_shortlink() ?>">
+					<i class="icomoon-link ml-2"></i>
+				</a>
+				<a href="#respond">
+					<i class="icomoon-chat ml-2"></i>
+				</a>
+				<a href="<?php echo $thumbnail_url ?>" data-fancybox data-caption="<?php the_title() ?>">
+					<i class="icomoon-eye ml-2"></i>
+				</a>
+			</div>
+		<?php endif; ?>
 		</div>
 	</div>
 <?php

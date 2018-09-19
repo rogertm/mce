@@ -26,6 +26,17 @@ function mce_setup(){
 add_action( 'after_setup_theme', 'mce_setup' );
 
 /**
+ * Init
+ *
+ * @since MCE 1.0
+ */
+function mce_init(){
+	// Give page excerpt's support
+	add_post_type_support( 'page', array( 'excerpt' ) );
+}
+add_action( 'init', 'mce_init' );
+
+/**
  * Keep an eye on revisions 8)
  *
  * @since MCE 1.0

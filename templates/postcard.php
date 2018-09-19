@@ -36,7 +36,7 @@ function mce_front_page_postcard(){
 	$thumbnail_id	= get_post_meta( $id, '_thumbnail_id', true );
 	$thumbnail_url	= wp_get_attachment_url( $thumbnail_id );
 	$meta 			= wp_get_attachment_metadata( $thumbnail_id );
-	$style			= 'background-image:url('. $thumbnail_url .');';
+	$style			= 'background-image:url('. $thumbnail_url .'); height:100%;';
 	$source			= ( get_post_meta( $id, 'postcard_source', true ) ) ? '<footer class="blockquote-footer font-italic text-light">'. get_post_meta( $id, 'postcard_source', true ) .'</footer>' : null;
 	$photo_by		= ( get_post_meta( $id, 'postcard_photo_by', true ) ) ? '<div class="mb-5">'. sprintf( __( 'Photo by: %s', 'mce' ), get_post_meta( $id, 'postcard_photo_by', true ) ) .'</div>' : null;
 ?>

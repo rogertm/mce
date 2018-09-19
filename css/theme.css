@@ -4827,7 +4827,7 @@ button#maintenance-mode-alert:focus {
 .bg-white {
   background-color: #fff !important; }
 
-.bg-transparent, #front-page-widget-one {
+.bg-transparent, #front-page-widget-one, .fancybox-content {
   background-color: transparent !important; }
 
 .border, .author-info {
@@ -10053,5 +10053,8 @@ body {
 
 #site-info {
   background-color: #e9ecef; }
+
+.fancybox-stage {
+  background-color: #000; }
 
 /*# sourceMappingURL=theme.css.map */
