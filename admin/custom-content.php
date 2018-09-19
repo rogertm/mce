@@ -42,6 +42,8 @@ function mce_custom_pages(){
 			'public_label'	=> __( 'Blog', 'mce' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
+			'post_type'		=> null,
+			'tax'			=> null,
 		),
 		'page_history'	=> array(
 			'value'			=> 'page_history',
@@ -49,6 +51,8 @@ function mce_custom_pages(){
 			'public_label'	=> __( 'History', 'mce' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
+			'post_type'		=> null,
+			'tax'			=> null,
 		),
 		'page_chronicles'	=> array(
 			'value'			=> 'page_chronicles',
@@ -56,6 +60,8 @@ function mce_custom_pages(){
 			'public_label'	=> __( 'Chronicles', 'mce' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
+			'post_type'		=> 'post',
+			'tax'			=> 'term_cat_chronicles',
 		),
 		'page_groups'	=> array(
 			'value'			=> 'page_groups',
@@ -63,6 +69,8 @@ function mce_custom_pages(){
 			'public_label'	=> __( 'Groups', 'mce' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
+			'post_type'		=> 'group',
+			'tax'			=> null,
 		),
 		'page_galleries'	=> array(
 			'value'			=> 'page_galleries',
@@ -70,6 +78,8 @@ function mce_custom_pages(){
 			'public_label'	=> __( 'Galleries', 'mce' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
+			'post_type'		=> 'gallery',
+			'tax'			=> null,
 		),
 		'page_routes'	=> array(
 			'value'			=> 'page_routes',
@@ -77,6 +87,8 @@ function mce_custom_pages(){
 			'public_label'	=> __( 'Routes', 'mce' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
+			'post_type'		=> 'route',
+			'tax'			=> null,
 		),
 		'page_contact'	=> array(
 			'value'			=> 'page_contact',
@@ -84,6 +96,8 @@ function mce_custom_pages(){
 			'public_label'	=> __( 'Contact', 'mce' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
+			'post_type'		=> null,
+			'tax'			=> null,
 		),
 		'page_faq'	=> array(
 			'value'			=> 'page_faq',
@@ -91,6 +105,8 @@ function mce_custom_pages(){
 			'public_label'	=> __( 'FAQ', 'mce' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
+			'post_type'		=> null,
+			'tax'			=> null,
 		),
 	);
 	return apply_filters( 'mce_admin_filter_custom_pages', $pages );

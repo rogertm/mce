@@ -22,6 +22,7 @@ jQuery(document).ready(function($) {
 		});
 		$('.singular-hero.bg-empty').css({
 			'width': $(window).width(),
+			'min-height': $(window).height() / 2,
 			'height': 'auto',
 		});
 	}
