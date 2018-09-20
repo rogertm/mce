@@ -4758,18 +4758,18 @@ button.bg-primary:focus {
   background-color: #0062cc !important; }
 
 .bg-secondary, .hero,
-.singular-hero {
+.hero-header {
   background-color: #6c757d !important; }
 
 a.bg-secondary:hover, a.hero:hover,
-a.singular-hero:hover, a.bg-secondary:focus, a.hero:focus,
-a.singular-hero:focus,
+a.hero-header:hover, a.bg-secondary:focus, a.hero:focus,
+a.hero-header:focus,
 button.bg-secondary:hover,
 button.hero:hover,
-button.singular-hero:hover,
+button.hero-header:hover,
 button.bg-secondary:focus,
 button.hero:focus,
-button.singular-hero:focus {
+button.hero-header:focus {
   background-color: #545b62 !important; }
 
 .bg-success {
@@ -10044,7 +10044,7 @@ body {
   background-color: #e9ecef; }
 
 .hero,
-.singular-hero {
+.hero-header {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;

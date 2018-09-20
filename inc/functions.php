@@ -22,6 +22,10 @@ function mce_setup(){
 	// Removed Hooks
 	remove_action( 't_em_action_post_inside_before', 't_em_single_post_thumbnail' );
 	remove_action( 't_em_action_content_before', 't_em_custom_template_content', 15 );
+	remove_action( 't_em_action_content_before', 't_em_header_archive_author_meta', 15 );
+	remove_action( 't_em_action_content_before', 't_em_header_archive_taxonomy', 15 );
+	remove_action( 't_em_action_content_before', 't_em_header_archive_date', 15 );
+	remove_action( 't_em_action_content_before', 't_em_header_archive_search', 15 );
 }
 add_action( 'after_setup_theme', 'mce_setup' );
 

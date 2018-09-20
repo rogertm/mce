@@ -15,12 +15,12 @@ jQuery(document).ready(function($) {
 			'width': $(window).width(),
 			'height': $(window).height(),
 		});
-		$('.singular-hero.bg-full').css({
+		$('.hero-header.bg-full').css({
 			'width': $(window).width(),
 			'min-height': $(window).height() / 1.5,
 			'height': 'auto',
 		});
-		$('.singular-hero.bg-empty').css({
+		$('.hero-header.bg-empty').css({
 			'width': $(window).width(),
 			'min-height': $(window).height() / 2,
 			'height': 'auto',
