@@ -24,13 +24,7 @@ function mce_front_page_chronicle(){
 	$args = array(
 		'post_type'			=> 'post',
 		'posts_per_page'	=> 1,
-		'cat'				=> $term,
-		'orderby'			=> 'rand',
-		'meta_query'		=> array(
-			array(
-				'key'		=> '_thumbnail_id',
-			),
-		),
+		'p'					=> get_option( 'mce_daily_chronicle' ),
 	);
 	$chronicles	= get_posts( $args );
 
@@ -41,7 +35,6 @@ function mce_front_page_chronicle(){
 	$id				= $chronicle->ID;
 	$thumbnail_id	= get_post_meta( $id, '_thumbnail_id', true );
 	$thumbnail_url	= wp_get_attachment_url( $thumbnail_id );
-	$meta 			= wp_get_attachment_metadata( $thumbnail_id );
 	$style			= 'background-image:url('. $thumbnail_url .');';
 ?>
 	<section id="chronicle-<?php echo $id ?>" class="chronicle hero text-light mb-7 d-flex align-items-end" style="<?php echo $style ?>">
