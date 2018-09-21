@@ -4906,7 +4906,7 @@ button#maintenance-mode-alert:focus {
   border-top-left-radius: 0.25rem !important;
   border-bottom-left-radius: 0.25rem !important; }
 
-.rounded-circle {
+.rounded-circle, .avatar {
   border-radius: 50% !important; }
 
 .rounded-0 {

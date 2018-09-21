@@ -17,7 +17,7 @@
  */
 function mce_action_chronicle_schedule(){
 	if ( ! wp_next_scheduled( 'mce_action_chronicle_schedule' ) ) :
-		wp_schedule_event( time(), 'daily', 'mce_action_chronicle_schedule' );
+		wp_schedule_event( current_time( 'timestamp' ), 'daily', 'mce_action_chronicle_schedule' );
 	endif;
 }
 add_action( 'wp', 'mce_action_chronicle_schedule' );

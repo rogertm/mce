@@ -112,6 +112,13 @@ body{
 }
 
 //
+// Users
+//
+.avatar{
+	@extend .rounded-circle;
+}
+
+//
 // Footer
 //
 #colophon{

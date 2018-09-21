@@ -43,7 +43,7 @@ function mce_testimonials(){
 							<?php echo $testimonial->post_content ?>
 						</div>
 						<div class="testimonial-footer d-flex justify-content-center">
-							<?php echo get_the_post_thumbnail( $testimonial->ID, 'thumbnail', array( 'class' => 'd-block rounded-circle' ) ) ?>
+							<?php echo get_the_post_thumbnail( $testimonial->ID, 'thumbnail', array( 'class' => 'd-block avatar' ) ) ?>
 							<h3 class="testimonial-name mt-5 ml-3"><?php echo $testimonial->post_title ?></h3>
 						</div>
 					</div>
