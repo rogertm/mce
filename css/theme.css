@@ -5954,7 +5954,8 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 .m-7 {
   margin: 7rem !important; }
 
-.mt-7, body:not(.home) #main, #static-header .actions,
+.mt-7, body:not(.home) #main,
+body:not(.home) .postcard, #static-header .actions,
 .my-7 {
   margin-top: 7rem !important; }
 

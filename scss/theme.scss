@@ -14,7 +14,8 @@
 }
 body{
 	&:not(.home){
-		#main{
+		#main,
+		.postcard{
 			@extend .mt-7;
 		}
 	}
