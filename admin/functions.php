@@ -33,9 +33,9 @@ function mce_admin_enqueue(){
 		wp_enqueue_style( 'style-admin' );
 	endif;
 
-	wp_register_style( 'select2', t_em_get_css( 'select2', T_EM_CHILD_THEME_DIR_PATH .'/css', T_EM_CHILD_THEME_DIR_URL .'/css' ) );
+	wp_register_style( 'select2', t_em_get_css( 'select2', T_EM_CHILD_THEME_DIR_PATH .'/node_modules/select2/dist/css', T_EM_CHILD_THEME_DIR_URL .'/node_modules/select2/dist/css' ) );
 	wp_enqueue_style( 'select2' );
-	wp_register_script( 'select2', t_em_get_js( 'select2', T_EM_CHILD_THEME_DIR_PATH .'/js', T_EM_CHILD_THEME_DIR_URL .'/js' ), array( 'jquery' ), t_em_theme( 'Version' ), true );
+	wp_register_script( 'select2', t_em_get_js( 'select2', T_EM_CHILD_THEME_DIR_PATH .'/node_modules/select2/dist/js', T_EM_CHILD_THEME_DIR_URL .'/node_modules/select2/dist/js' ), array( 'jquery' ), t_em_theme( 'Version' ), true );
 	wp_enqueue_script( 'select2' );
 	wp_register_script( 'admin', t_em_get_js( 'admin', T_EM_CHILD_THEME_DIR_PATH .'/admin', T_EM_CHILD_THEME_DIR_URL .'/admin' ), array( 'jquery' ), t_em_theme( 'Version' ), true );
 	wp_enqueue_script( 'admin' );
