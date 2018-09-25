@@ -153,4 +153,47 @@ function mce_hero_header(){
 <?php
 }
 add_action( 't_em_action_header', 'mce_hero_header' );
+
+/**
+ * Related entries in post type post
+ *
+ * @since MCE 1.0
+ */
+function mce_related_post(){
+	if ( ! is_single() )
+		return;
+
+	global $post;
+	$post_id 	= $post->ID;
+	$post__in	= mce_get_post_data( $post_id );
+	$post__in	= array_slice( $post__in, 0, 6 );
+
+	if ( ! $post__in )
+		return;
+?>
+	<section id="related-posts" class="py-5">
+		<h5 class="mb-3"><?php _e( 'You may also read:', 'mce' ) ?></h5><hr>
+		<div class="row">
+<?php
+	foreach ( $post__in as $id ) :
+		$post_type	= get_post_type( $id );
+		$obj 		= get_post_type_object( $post_type );
+		$label 		= ( $post_type != 'post' ) ? $obj->labels->singular_name .': ' : null;
+?>
+			<div class="<?php echo t_em_grid( 4 ) .' '. t_em_grid( 6, 'md' ) ?>">
+				<div class="card mb-5">
+					<?php echo t_em_featured_post_thumbnail( 700, 350, true, 'card-img-top', $id ) ?>
+					<div class="card-body">
+						<h4 class="h5"><a href="<?php echo get_permalink( $id ) ?>"><?php echo $label . get_the_title( $id ) ?></a></h4>
+					</div>
+				</div>
+			</div>
+<?php
+	endforeach;
+?>
+		</div>
+	</section>
+<?php
+}
+add_action( 't_em_action_post_after', 'mce_related_post' );
 ?>

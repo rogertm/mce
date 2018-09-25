@@ -26,6 +26,7 @@ function mce_setup(){
 	remove_action( 't_em_action_content_before', 't_em_header_archive_taxonomy', 15 );
 	remove_action( 't_em_action_content_before', 't_em_header_archive_date', 15 );
 	remove_action( 't_em_action_content_before', 't_em_header_archive_search', 15 );
+	remove_action( 't_em_action_post_after', 't_em_single_related_posts' );
 }
 add_action( 'after_setup_theme', 'mce_setup' );
 

@@ -11,6 +11,103 @@
  */
 
 /**
+ * Get post data and related posts
+ * @param int 		$post_id. Post ID
+ * @return array 	Array of related entries
+ *
+ * @since MCE 1.0
+ */
+function mce_get_post_data( $post_id ){
+	// Data fields
+	$fields 	= mce_post_data_fields();
+	$data__in	= array();
+
+	foreach ( $fields as $key => $value ) :
+		$data = ( get_post_meta( $post_id, $value['meta'], true ) ) ? get_post_meta( $post_id, $value['meta'], true ) : null;
+		$data__in = ( $data ) ? array_merge( $data__in, $data ) : array();
+	endforeach;
+
+	// Same CPT
+	$type__in	= array();
+	$post_type = get_post_type( $post_id );
+
+	if ( $post_type != 'post' ) :
+		$type_args = array(
+			'post_type'			=> $post_type,
+			'posts_per_page'	=> -1,
+			'post__not_in'		=> array( $post_id ),
+			'post_status'		=> 'publish',
+			'meta_key'			=> '_thumbnail_id',
+		);
+
+		$types = get_posts( $type_args );
+		foreach ( $types as $type ) :
+			$type__in = array_merge( $type__in, array( $type->ID ) );
+		endforeach;
+	endif;
+
+	// Related Post
+	$taxed__in = array();
+	$post_args = array(
+		'post_type'			=> 'post',
+		'posts_per_page'	=> -1,
+		'post__not_in'		=> array( $post_id ),
+		'post_status'		=> 'publish',
+		'meta_key'			=> '_thumbnail_id',
+		'tax_query'			=> array(
+			'relation'		=> 'OR',
+		),
+	);
+
+	$taxonomies = get_taxonomies( array( 'public' => true ), 'object' );
+	$taxonomy = array();
+	foreach ( $taxonomies as $key => $value ) :
+		if ( in_array( $post_type, $value->object_type ) ) :
+			array_push( $taxonomy, $key );
+		endif;
+	endforeach;
+	if ( $taxonomy ) :
+		foreach ( $taxonomy as $tax ) :
+			$terms = get_the_terms( $post_id, $tax );
+			if ( ! $terms ) continue;
+			$terms_ids = array();
+			foreach ( $terms as $term ) :
+				array_push( $terms_ids, $term->term_id );
+			endforeach;
+			$key = array(
+				'taxonomy'	=> $tax,
+				'field'		=> 'id',
+				'terms'		=> $terms_ids,
+			);
+			array_push( $post_args['tax_query'], $key );
+		endforeach;
+	endif;
+
+	$taxed = get_posts( $post_args );
+	foreach ( $taxed as $p ) :
+		$taxed__in = array_merge( $taxed__in, array( $p->ID ) );
+	endforeach;
+
+	// Empty Posts
+	$empty_args = array(
+		'post_type'			=> 'post',
+		'posts_per_page'	=> -1,
+		'post__not_in'		=> array( $post_id ),
+		'post_status'		=> 'publish',
+		'meta_key'			=> '_thumbnail_id',
+	);
+	$empty_posts = get_posts( $empty_args );
+	$empty__in = array();
+	foreach ( $empty_posts as $p ) :
+		$empty__in = array_merge( $empty__in, array( $p->ID ) );
+	endforeach;
+
+	$posts = array_merge( $data__in, $type__in, $taxed__in, $empty__in );
+
+	return array_unique( $posts );
+}
+
+/**
  * Post Data Fields
  * @return array 	Array of fields
  *
@@ -64,7 +161,7 @@ function mce_post_data_callback( $post ){
 <?php 	foreach( $entries as $entry ) :
 			$selected = ( in_array( $entry->ID, $meta ) ) ? 'selected' : null;
 ?>
-		<option value="<?php echo $entry->ID ?>" <?php echo $selected ?>><?php echo $entry->post_title ?> <?php echo $entry->ID ?></option>
+		<option value="<?php echo $entry->ID ?>" <?php echo $selected ?>><?php echo $entry->post_title ?></option>
 <?php 	endforeach; ?>
 	</select>
 <?php
