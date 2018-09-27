@@ -140,3 +140,21 @@ body{
 		@extend .bg-transparent;
 	}
 }
+
+//
+// ScrollTo
+//
+#gototop{
+	display: none;
+	top: auto;
+	left: auto;
+	right: 1rem;
+	bottom: 1rem;
+	background-color: rgba($black,.3);
+	@extend .position-fixed;
+	@extend .text-white-50;
+	&:hover,
+	&:focus{
+		background-color: rgba( $primary, .7);
+	}
+}

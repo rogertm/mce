@@ -34,7 +34,7 @@ get_header(); ?>
 			<h2 id="faq-index"><?php _e( 'Table of Content', 'mce' ) ?></h2>
 			<ol class="list-unstyled">
 			<?php foreach ( $faqs as $faq ) : ?>
-				<li class="h5"><a href="<?php echo get_permalink( t_em( 'page_faq' ) ) .'#faq-'. $faq->ID ?>"><?php echo $faq->post_title ?></a></li>
+				<li class="h5"><a href="<?php echo get_permalink( t_em( 'page_faq' ) ) .'#faq-'. $faq->ID ?>" class="scroll-to" data-target="<?php echo '#faq-'. $faq->ID ?>"><?php echo $faq->post_title ?></a></li>
 			<?php endforeach; wp_reset_postdata(); ?>
 			</ol>
 
@@ -44,7 +44,7 @@ get_header(); ?>
 					<h2 class="faq-title pt-5"><?php echo $faq->post_title ?></h2>
 					<div class="faq-text">
 						<?php echo t_em_wrap_paragraph( $faq->post_content ) ?>
-						<p class="text-right"><a href="#faq-index" class="btn btn-sm btn-link"><?php _e( 'Back to top', 'mce' ) ?></a></p>
+						<p class="text-right"><a href="#faq-index" class="btn btn-sm btn-link scroll-to" data-target="#faq-index"><?php _e( 'Back to top', 'mce' ) ?></a></p>
 					</div>
 				</div>
 			</div>

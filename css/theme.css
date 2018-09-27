@@ -5677,7 +5677,7 @@ button#maintenance-mode-alert:focus {
 .position-absolute {
   position: absolute !important; }
 
-.position-fixed {
+.position-fixed, #gototop {
   position: fixed !important; }
 
 .position-sticky {
@@ -8347,7 +8347,7 @@ a.text-dark:hover, a.text-dark:focus {
 .text-black-50 {
   color: rgba(0, 0, 0, 0.5) !important; }
 
-.text-white-50 {
+.text-white-50, #gototop {
   color: rgba(255, 255, 255, 0.5) !important; }
 
 .text-hide {
@@ -10068,5 +10068,15 @@ body {
 
 .fancybox-stage {
   background-color: #000; }
+
+#gototop {
+  display: none;
+  top: auto;
+  left: auto;
+  right: 1rem;
+  bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.3); }
+  #gototop:hover, #gototop:focus {
+    background-color: rgba(0, 123, 255, 0.7); }
 
 /*# sourceMappingURL=theme.css.map */

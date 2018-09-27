@@ -104,6 +104,26 @@ jQuery(document).ready(function($) {
 		],
 	});
 
+	/** Go to top */
+	var gotoTop = $('#gototop');
+	$(window).scroll(function(){
+		if ($('body,html').scrollTop() > Number( $('#header').outerHeight() ) ){
+			$(gotoTop).fadeIn();
+		}else{
+			$(gotoTop).fadeOut();
+		}
+	});
+
+	/** ScrollTo */
+	$('.scroll-to').click(function(e){
+		e.preventDefault();
+		var element = $(this),
+			target = element.attr('data-target');
+		$(window).scrollTo(target,{
+			duration: 500,
+		});
+	});
+
 	// Run function on resize
 	$(window).resize(function(){
 		mce_fullscreen_hero();
