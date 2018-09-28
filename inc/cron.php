@@ -33,6 +33,7 @@ function mce_set_daily_chronicle(){
 		'cat'				=> t_em( 'term_cat_chronicles' ),
 		'posts_per_page'	=> 1,
 		'orderby'			=> 'rand',
+		'post__not_in'		=> array( get_option( 'mce_daily_chronicle' ) ),
 		'meta_query'		=> array(
 			array(
 				'key'		=> '_thumbnail_id',

@@ -78,7 +78,7 @@ function mce_hero_header(){
 				<a href="<?php echo wp_get_shortlink() ?>">
 					<i class="icomoon-link ml-2"></i>
 				</a>
-				<a href="#respond">
+				<a href="#respond" class="scroll-to" data-target="#respond">
 					<i class="icomoon-chat ml-2"></i>
 				</a>
 				<a href="<?php echo $thumbnail_url ?>" data-fancybox data-caption="<?php the_title() ?>">
