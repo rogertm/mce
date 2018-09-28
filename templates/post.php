@@ -84,7 +84,6 @@ function mce_related_post(){
 	global $post;
 	$post_id 	= $post->ID;
 	$post__in	= mce_get_post_data( $post_id );
-	$post__in	= array_slice( $post__in, 0, 6 );
 
 	if ( ! $post__in )
 		return;
