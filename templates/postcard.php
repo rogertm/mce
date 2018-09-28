@@ -20,11 +20,7 @@ function mce_front_page_postcard(){
 		'post_type'			=> 'postcard',
 		'posts_per_page'	=> 1,
 		'orderby'			=> 'rand',
-		'meta_query'		=> array(
-			array(
-				'key'		=> '_thumbnail_id',
-			),
-		),
+		'meta_key'			=> '_thumbnail_id',
 	);
 	$postcards 		= get_posts( $args );
 

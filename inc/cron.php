@@ -28,17 +28,14 @@ add_action( 'wp', 'mce_action_chronicle_schedule' );
  * @since MCE 1.0
  */
 function mce_set_daily_chronicle(){
+	$current = ( get_option( 'mce_daily_chronicle' ) ) ? get_option( 'mce_daily_chronicle' ) : 0;
 	$args = array(
 		'post_type'			=> 'post',
 		'cat'				=> t_em( 'term_cat_chronicles' ),
 		'posts_per_page'	=> 1,
 		'orderby'			=> 'rand',
-		'post__not_in'		=> array( get_option( 'mce_daily_chronicle' ) ),
-		'meta_query'		=> array(
-			array(
-				'key'		=> '_thumbnail_id',
-			),
-		),
+		'post__not_in'		=> array( $current ),
+		'meta_key'			=> '_thumbnail_id',
 	);
 	$chronicle = get_posts( $args );
 	$chronicle = $chronicle[0]->ID;

@@ -24,12 +24,8 @@ function mce_latests_post(){
 	$args = array(
 		'post_type'			=> 'post',
 		'posts_per_page'	=> 3,
-		'cat'				=> - $chronicle,
-		'meta_query'		=> array(
-			array(
-				'key'		=> '_thumbnail_id',
-			),
-		)
+		'cat'				=> -$chronicle,
+		'meta_key'			=> '_thumbnail_id',
 	);
 	$wp_query = new WP_Query( $args );
 ?>
