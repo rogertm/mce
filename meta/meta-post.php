@@ -28,21 +28,30 @@ function mce_get_post_data( $post_id ){
 	endforeach;
 
 	// Same CPT
+	$post_type 	= get_post_type( $post_id );
+	$link__in	= array();
 	$type__in	= array();
-	$post_type = get_post_type( $post_id );
 
 	if ( $post_type != 'post' ) :
 		$type_args = array(
 			'post_type'			=> $post_type,
 			'posts_per_page'	=> -1,
-			'post__not_in'		=> array( $post_id, 0 ),
+			'post__not_in'		=> array( $post_id ),
 			'post_status'		=> 'publish',
 			'meta_key'			=> '_thumbnail_id',
 		);
 
 		$types = get_posts( $type_args );
+
+		// Same CPT
 		foreach ( $types as $type ) :
 			$type__in = array_merge( $type__in, array( $type->ID ) );
+		endforeach;
+
+		// Push the meta
+		foreach ( $fields as $key => $value ) :
+			$data = ( get_post_meta( $post_id, 'mce_'. $value['post-type'] .'_posts', true ) ) ? get_post_meta( $post_id, 'mce_'. $value['post-type'] .'_posts', true ) : array();
+			$link__in = array_merge( $link__in, $data );
 		endforeach;
 	endif;
 
@@ -51,7 +60,7 @@ function mce_get_post_data( $post_id ){
 	$post_args = array(
 		'post_type'			=> 'post',
 		'posts_per_page'	=> -1,
-		'post__not_in'		=> array( $post_id, 0 ),
+		'post__not_in'		=> array( $post_id ),
 		'post_status'		=> 'publish',
 		'meta_key'			=> '_thumbnail_id',
 		'tax_query'			=> array(
@@ -92,7 +101,7 @@ function mce_get_post_data( $post_id ){
 	$empty_args = array(
 		'post_type'			=> 'post',
 		'posts_per_page'	=> -1,
-		'post__not_in'		=> array( $post_id, 0 ),
+		'post__not_in'		=> array( $post_id ),
 		'post_status'		=> 'publish',
 		'meta_key'			=> '_thumbnail_id',
 	);
@@ -102,10 +111,11 @@ function mce_get_post_data( $post_id ){
 		$empty__in = array_merge( $empty__in, array( $p->ID ) );
 	endforeach;
 
-	$posts = array_merge( $data__in, $type__in, $taxed__in, $empty__in );
+	$posts = array_merge( $data__in, $link__in, $type__in, $taxed__in, $empty__in );
+	$posts = array_unique( $posts );
 
 	// Return only six posts
-	return array_unique( array_slice( $posts, 0, 6 ) );
+	return array_slice( $posts, 0, 6 );
 }
 
 /**
@@ -162,7 +172,7 @@ function mce_post_data_callback( $post ){
 <?php 	foreach( $entries as $entry ) :
 			$selected = ( in_array( $entry->ID, $meta ) ) ? 'selected' : null;
 ?>
-		<option value="<?php echo $entry->ID ?>" <?php echo $selected ?>><?php echo $entry->post_title ?></option>
+		<option value="<?php echo $entry->ID ?>" <?php echo $selected ?>><?php echo $entry->post_title ?> <?php echo $entry->ID ?></option>
 <?php 	endforeach; ?>
 	</select>
 <?php
@@ -189,52 +199,37 @@ function mce_save_post_data( $post_id ){
 	$fields = mce_post_data_fields();
 	foreach ( $fields as $key => $value ) :
 		if ( isset( $_POST[$value['meta']] ) ) :
-			// @TODO: Make this to work
-			/*$meta = get_post_meta( $post_id, $value['meta'], true );
+			/**
+			 * @TODO: Make this to work properly
+			 * When $meta result array ( [0] => 123 ) this does not work
+			 */
+			$meta = get_post_meta( $post_id, $value['meta'], true );
 			foreach ( $meta as $data ) :
 				if ( ! in_array( $data, $_POST[$value['meta']] ) ) :
-					$links = get_post_meta( $data, $value['post-type'].'_posts', true );
+					$links = get_post_meta( $data, 'mce_'. $value['post-type'] .'_posts', true );
 					$linked = array();
 					foreach ( $links as $link ) :
 						if ( $link != $post_id ) :
 							array_push( $linked, $link );
 						endif;
 					endforeach;
-					update_post_meta( $data, $value['post-type'].'_posts', $linked );
-					if ( empty( get_post_meta( $data, $value['post-type'].'_posts', true ) ) ) :
-						delete_post_meta( $data, $value['post-type'].'_posts' );
+					update_post_meta( $data, 'mce_'. $value['post-type'] .'_posts', $linked );
+					if ( empty( get_post_meta( $data, 'mce_'. $value['post-type'] .'_posts', true ) ) ) :
+						delete_post_meta( $data, 'mce_'. $value['post-type'] .'_posts' );
 					endif;
 				endif;
-			endforeach;*/
-
-
-			/*foreach ( $_POST[$value['meta']] as $m ) :
-				$meta = get_post_meta( $post_id, $m, true );
-				foreach ( $meta as $data ) :
-					if ( ! in_array( $data, $_POST[$m] ) ) :
-						$links = get_post_meta( $data, $value['post-type'].'_posts', true );
-						$linked = array();
-						foreach ( $links as $link ) :
-							if ( $link != $post_id ) :
-								array_push( $linked, $link );
-							endif;
-						endforeach;
-						update_post_meta( $data, $value['post-type'].'_posts', $linked );
-						if ( empty( get_post_meta( $data, $value['post-type'].'_posts', true ) ) ) :
-							delete_post_meta( $data, $value['post-type'].'_posts' );
-						endif;
-					endif;
-				endforeach;
-			endforeach;*/
-
+			endforeach;
+			/**
+			 * @ENDTODO
+			 */
 
 			$new_data = array();
 			foreach( $_POST[$value['meta']] as $data ) :
 				array_push( $new_data, $data );
-				$new_meta = ( get_post_meta( $data, 'mce_'. $value['post-type'].'_posts', true ) ) ? get_post_meta( $data, 'mce_'. $value['post-type'].'_posts', true ) : array();
+				$new_meta = ( get_post_meta( $data, 'mce_'. $value['post-type'] .'_posts', true ) ) ? get_post_meta( $data, 'mce_'. $value['post-type'] .'_posts', true ) : array();
 				if ( ! in_array( $post_id, $new_meta ) ) :
 					array_push( $new_meta, $post_id );
-					update_post_meta( $data, 'mce_'. $value['post-type'].'_posts', $new_meta );
+					update_post_meta( $data, 'mce_'. $value['post-type'] .'_posts', $new_meta );
 				endif;
 			endforeach;
 			update_post_meta( $post_id, $value['meta'], $new_data );
