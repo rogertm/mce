@@ -20,12 +20,12 @@ function mce_postcard_data_fields(){
 	$fields = array(
 		'source'	=> array(
 			'label'	=> __( 'Source or author', 'mce' ),
-			'meta'	=> 'postcard_source',
+			'meta'	=> 'mce_postcard_source',
 			'type'	=> 'text',
 		),
 		'photo_by'	=> array(
 			'label'	=> __( 'Photo by', 'mce' ),
-			'meta'	=> 'postcard_photo_by',
+			'meta'	=> 'mce_postcard_photo_by',
 			'type'	=> 'text',
 		),
 	);

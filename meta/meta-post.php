@@ -118,19 +118,19 @@ function mce_post_data_fields(){
 	$fields = array(
 		'groups'		=> array(
 			'label'		=> __( 'Groups', 'mce' ),
-			'meta'		=> 'post_groups',
+			'meta'		=> 'mce_post_groups',
 			'post-type'	=> 'group',
 			'type'		=> 'select',
 		),
 		'routes'		=> array(
 			'label'		=> __( 'Routes', 'mce' ),
-			'meta'		=> 'post_routes',
+			'meta'		=> 'mce_post_routes',
 			'post-type'	=> 'route',
 			'type'		=> 'select',
 		),
 		'galleries'		=> array(
 			'label'		=> __( 'Galleries', 'mce' ),
-			'meta'		=> 'post_galleries',
+			'meta'		=> 'mce_post_galleries',
 			'post-type'	=> 'gallery',
 			'type'		=> 'select',
 		),
@@ -231,10 +231,10 @@ function mce_save_post_data( $post_id ){
 			$new_data = array();
 			foreach( $_POST[$value['meta']] as $data ) :
 				array_push( $new_data, $data );
-				$new_meta = ( get_post_meta( $data, $value['post-type'].'_posts', true ) ) ? get_post_meta( $data, $value['post-type'].'_posts', true ) : array();
+				$new_meta = ( get_post_meta( $data, 'mce_'. $value['post-type'].'_posts', true ) ) ? get_post_meta( $data, 'mce_'. $value['post-type'].'_posts', true ) : array();
 				if ( ! in_array( $post_id, $new_meta ) ) :
 					array_push( $new_meta, $post_id );
-					update_post_meta( $data, $value['post-type'].'_posts', $new_meta );
+					update_post_meta( $data, 'mce_'. $value['post-type'].'_posts', $new_meta );
 				endif;
 			endforeach;
 			update_post_meta( $post_id, $value['meta'], $new_data );
