@@ -129,19 +129,19 @@ function mce_post_data_fields(){
 		'groups'		=> array(
 			'label'		=> __( 'Groups', 'mce' ),
 			'meta'		=> 'mce_post_groups',
-			'post-type'	=> 'group',
+			'post-type'	=> 'mce-group',
 			'type'		=> 'select',
 		),
 		'routes'		=> array(
 			'label'		=> __( 'Routes', 'mce' ),
 			'meta'		=> 'mce_post_routes',
-			'post-type'	=> 'route',
+			'post-type'	=> 'mce-route',
 			'type'		=> 'select',
 		),
 		'galleries'		=> array(
 			'label'		=> __( 'Galleries', 'mce' ),
 			'meta'		=> 'mce_post_galleries',
-			'post-type'	=> 'gallery',
+			'post-type'	=> 'mce-gallery',
 			'type'		=> 'select',
 		),
 	);
@@ -172,7 +172,7 @@ function mce_post_data_callback( $post ){
 <?php 	foreach( $entries as $entry ) :
 			$selected = ( in_array( $entry->ID, $meta ) ) ? 'selected' : null;
 ?>
-		<option value="<?php echo $entry->ID ?>" <?php echo $selected ?>><?php echo $entry->post_title ?> <?php echo $entry->ID ?></option>
+		<option value="<?php echo $entry->ID ?>" <?php echo $selected ?>><?php echo $entry->post_title ?></option>
 <?php 	endforeach; ?>
 	</select>
 <?php
