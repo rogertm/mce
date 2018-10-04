@@ -69,7 +69,7 @@ function mce_custom_pages(){
 			'public_label'	=> __( 'Groups', 'mce' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
-			'post_type'		=> 'group',
+			'post_type'		=> 'mce-group',
 			'tax'			=> null,
 		),
 		'page_galleries'	=> array(
@@ -78,7 +78,7 @@ function mce_custom_pages(){
 			'public_label'	=> __( 'Galleries', 'mce' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
-			'post_type'		=> 'gallery',
+			'post_type'		=> 'mce-gallery',
 			'tax'			=> null,
 		),
 		'page_routes'	=> array(
@@ -87,7 +87,7 @@ function mce_custom_pages(){
 			'public_label'	=> __( 'Routes', 'mce' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
-			'post_type'		=> 'route',
+			'post_type'		=> 'mce-route',
 			'tax'			=> null,
 		),
 		'page_contact'	=> array(
@@ -105,7 +105,7 @@ function mce_custom_pages(){
 			'public_label'	=> __( 'FAQ', 'mce' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
-			'post_type'		=> 'faq',
+			'post_type'		=> 'mce-faq',
 			'tax'			=> null,
 		),
 		'page_testimonial'	=> array(
@@ -114,7 +114,7 @@ function mce_custom_pages(){
 			'public_label'	=> __( 'Testimonial', 'mce' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
-			'post_type'		=> 'jetpack-testimonial',
+			'post_type'		=> 'mce-testimonial',
 			'tax'			=> null,
 		),
 	);

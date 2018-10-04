@@ -17,7 +17,7 @@
 <?php
 // Custom query for post type FAQ
 $args = array(
-'post_type'			=> 'faq',
+'post_type'			=> 'mce-faq',
 'posts_per_page'	=> -1,
 'order'				=> 'ASC',
 'orderby'			=> 'menu_order',

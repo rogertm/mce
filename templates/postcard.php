@@ -17,7 +17,7 @@
  */
 function mce_front_page_postcard(){
 	$args = array(
-		'post_type'			=> 'postcard',
+		'post_type'			=> 'mce-postcard',
 		'posts_per_page'	=> 1,
 		'orderby'			=> 'rand',
 		'meta_key'			=> '_thumbnail_id',

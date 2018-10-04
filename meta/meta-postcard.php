@@ -105,7 +105,7 @@ function mce_postcard_custom_columns( $custom_columns ){
 	$custom_columns['thumbnail']	= __( 'Thumbnail', 'mce' );
 	return $custom_columns;
 }
-add_action( 'manage_postcard_posts_columns', 'mce_postcard_custom_columns' );
+add_action( 'manage_mce-postcard_posts_columns', 'mce_postcard_custom_columns' );
 
 /**
  * Add the content to Postcard custom columns
@@ -122,5 +122,5 @@ function mce_postcard_content_columns( $columns_name, $id ){
 		endif;
 	endif;
 }
-add_action( 'manage_postcard_posts_custom_column', 'mce_postcard_content_columns', 10, 2 );
+add_action( 'manage_mce-postcard_posts_custom_column', 'mce_postcard_content_columns', 10, 2 );
 ?>

@@ -17,46 +17,60 @@
  */
 function mce_post_types(){
 	$post_types = array(
-		'group'		=> array( 'post-type'		=> 'group',
-							  'singular'		=> _x( 'Group', 'post type singular name', 'mce' ),
-							  'plural'			=> _x( 'Groups', 'post type general name', 'mce' ),
-							  'hierarchical'	=> false,
-							  'supports'		=> array( 'title', 'editor', 'thumbnail', 'excerpt', 'revisions', 'shortlinks' ),
-							  'rewrite'			=> _x( 'group', 'post type slug', 'mce' ),
-							  'public'			=> true,
-					),
-		'route'		=> array( 'post-type'		=> 'route',
-							  'singular'		=> _x( 'Route', 'post type singular name', 'mce' ),
-							  'plural'			=> _x( 'Routes', 'post type general name', 'mce' ),
-							  'hierarchical'	=> false,
-							  'supports'		=> array( 'title', 'editor', 'thumbnail', 'excerpt', 'revisions', 'shortlinks' ),
-							  'rewrite'			=> _x( 'route', 'post type slug', 'mce' ),
-							  'public'			=> true,
-					),
-		'gallery'	=> array( 'post-type'		=> 'gallery',
-						 	  'singular'		=> _x( 'Gallery', 'post type singular name', 'mce' ),
-							  'plural'			=> _x( 'Galleries', 'post type general name', 'mce' ),
-							  'hierarchical'	=> false,
-							  'supports'		=> array( 'title', 'editor', 'thumbnail', 'excerpt', 'revisions', 'shortlinks' ),
-							  'rewrite'			=> _x( 'gallery', 'post type slug', 'mce' ),
-							  'public'			=> true,
-					),
-		'postcard'	=> array( 'post-type'		=> 'postcard',
-						 	  'singular'		=> _x( 'Postcard', 'post type singular name', 'mce' ),
-							  'plural'			=> _x( 'Postcards', 'post type general name', 'mce' ),
-							  'hierarchical'	=> false,
-							  'supports'		=> array( 'excerpt', 'thumbnail', 'revisions' ),
-							  'rewrite'			=> _x( 'postcard', 'post type slug', 'mce' ),
-							  'public'			=> false,
-					),
-		'faq'		=> array( 'post-type'		=> 'faq',
-						 	  'singular'		=> _x( 'FAQ', 'post type singular name', 'mce' ),
-							  'plural'			=> _x( 'FAQs', 'post type general name', 'mce' ),
-							  'hierarchical'	=> false,
-							  'supports'		=> array( 'title', 'editor', 'page-attributes', 'revisions' ),
-							  'rewrite'			=> _x( 'faq', 'post type slug', 'mce' ),
-							  'public'			=> false,
-					),
+		'mce-group'		=> array(
+				'post-type'		=> 'mce-group',
+				'singular'		=> _x( 'Group', 'post type singular name', 'mce' ),
+				'plural'		=> _x( 'Groups', 'post type general name', 'mce' ),
+				'hierarchical'	=> false,
+				'supports'		=> array( 'title', 'editor', 'thumbnail', 'excerpt', 'revisions', 'shortlinks' ),
+				'rewrite'		=> _x( 'group', 'post type slug', 'mce' ),
+				'public'		=> true,
+			),
+		'mce-route'		=> array(
+				'post-type'			=> 'mce-route',
+				'singular'		=> _x( 'Route', 'post type singular name', 'mce' ),
+				'plural'		=> _x( 'Routes', 'post type general name', 'mce' ),
+				'hierarchical'	=> false,
+				'supports'		=> array( 'title', 'editor', 'thumbnail', 'excerpt', 'revisions', 'shortlinks' ),
+				'rewrite'		=> _x( 'route', 'post type slug', 'mce' ),
+				'public'		=> true,
+			),
+		'mce-gallery'	=> array(
+				'post-type'		=> 'mce-gallery',
+				'singular'		=> _x( 'Gallery', 'post type singular name', 'mce' ),
+				'plural'		=> _x( 'Galleries', 'post type general name', 'mce' ),
+				'hierarchical'	=> false,
+				'supports'		=> array( 'title', 'editor', 'thumbnail', 'excerpt', 'revisions', 'shortlinks' ),
+				'rewrite'		=> _x( 'gallery', 'post type slug', 'mce' ),
+				'public'		=> true,
+			),
+		'mce-postcard'	=> array(
+				'post-type'		=> 'mce-postcard',
+				'singular'		=> _x( 'Postcard', 'post type singular name', 'mce' ),
+				'plural'		=> _x( 'Postcards', 'post type general name', 'mce' ),
+				'hierarchical'	=> false,
+				'supports'		=> array( 'excerpt', 'thumbnail', 'revisions' ),
+				'rewrite'		=> _x( 'postcard', 'post type slug', 'mce' ),
+				'public'		=> false,
+			),
+		'mce-faq'		=> array(
+				'post-type'		=> 'mce-faq',
+				'singular'		=> _x( 'FAQ', 'post type singular name', 'mce' ),
+				'plural'		=> _x( 'FAQs', 'post type general name', 'mce' ),
+				'hierarchical'	=> false,
+				'supports'		=> array( 'title', 'editor', 'page-attributes', 'revisions' ),
+				'rewrite'		=> _x( 'faq', 'post type slug', 'mce' ),
+				'public'		=> false,
+			),
+		'mce-testimonial'	=> array(
+				'post-type'		=> 'mce-testimonial',
+				'singular'		=> _x( 'Testimonial', 'post type singular name', 'mce' ),
+				'plural'		=> _x( 'Testimonials', 'post type general name', 'mce' ),
+				'hierarchical'	=> false,
+				'supports'		=> array( 'title', 'editor', 'thumbnail', 'revisions' ),
+				'rewrite'		=> _x( 'testimonial', 'post type slug', 'mce' ),
+				'public'		=> false,
+			),
 	);
 
 	foreach ( $post_types as $post_type => $pt ) :
@@ -100,7 +114,7 @@ function mce_post_types(){
 	// Register Custom Taxonomies
 	$taxonomies = array(
 		'degree'	=> array(
-			'post_type'				=> array( 'route' ),
+			'post_type'				=> array( 'mce-route' ),
 			'singular'				=> _x( 'Degree of Difficulty', 'taxonomy singular name', 'mce' ),
 			'plural'				=> _x( 'Degrees of Difficulty', 'taxonomy general name', 'mce' ),
 			'hierarchical'			=> true,
@@ -111,7 +125,7 @@ function mce_post_types(){
 			'rewrite'				=> array( 'slug' => 'route-degree' ),
 		),
 		'zone'	=> array(
-			'post_type'				=> array( 'route' ),
+			'post_type'				=> array( 'mce-route' ),
 			'singular'				=> _x( 'Zone', 'taxonomy singular name', 'mce' ),
 			'plural'				=> _x( 'Zones', 'taxonomy general name', 'mce' ),
 			'hierarchical'			=> true,
@@ -152,7 +166,7 @@ function mce_post_types(){
 		);
 
 		register_taxonomy( $taxonomy, $tax['post_type'], $args );
-	endforeach;;
+	endforeach;
 }
 add_action( 'init', 'mce_post_types' );
 

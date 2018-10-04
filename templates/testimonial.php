@@ -17,7 +17,7 @@
  */
 function mce_testimonials(){
 	$args = array(
-		'post_type'			=> 'jetpack-testimonial',
+		'post_type'			=> 'mce-testimonial',
 		'posts_per_page'	=> 3,
 	);
 	$testimonials = get_posts( $args );
