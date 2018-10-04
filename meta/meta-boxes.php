@@ -20,7 +20,7 @@ function mce_meta_boxes(){
 	add_meta_box( 'mce-post-data', __( 'Post Data' ), 'mce_post_data_callback', 'post', 'advanced', 'high' );
 
 	// Postcard
-	add_meta_box( 'mce-postcard-data', __( 'Postcard Data' ), 'mce_postcard_data_callback', 'postcard', 'advanced', 'high' );
+	add_meta_box( 'mce-postcard-data', __( 'Postcard Data' ), 'mce_postcard_data_callback', 'mce-postcard', 'advanced', 'high' );
 }
 add_action( 'add_meta_boxes', 'mce_meta_boxes' );
 
