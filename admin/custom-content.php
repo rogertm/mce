@@ -105,7 +105,16 @@ function mce_custom_pages(){
 			'public_label'	=> __( 'FAQ', 'mce' ),
 			'user_menu'		=> '',
 			'type'			=> 'page',
-			'post_type'		=> null,
+			'post_type'		=> 'faq',
+			'tax'			=> null,
+		),
+		'page_testimonial'	=> array(
+			'value'			=> 'page_testimonial',
+			'label'			=> __( 'Page Testimonial', 'mce' ),
+			'public_label'	=> __( 'Testimonial', 'mce' ),
+			'user_menu'		=> '',
+			'type'			=> 'page',
+			'post_type'		=> 'jetpack-testimonial',
 			'tax'			=> null,
 		),
 	);

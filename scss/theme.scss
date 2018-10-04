@@ -116,6 +116,20 @@ body{
 //
 .avatar{
 	@extend .rounded-circle;
+	@extend .border;
+}
+
+//
+// Testimonial
+//
+#testimonial-archive{
+	.testimonial{
+		@extend .mt-6;
+		&-image{
+			margin-top: -25%;
+			@extend .mx-auto;
+		}
+	}
 }
 
 //

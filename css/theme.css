@@ -4830,7 +4830,7 @@ button#maintenance-mode-alert:focus {
 .bg-transparent, #front-page-widget-one, .fancybox-content {
   background-color: transparent !important; }
 
-.border, .author-info {
+.border, .author-info, .avatar {
   border: 1px solid #dee2e6 !important; }
 
 .border-top {
@@ -5935,7 +5935,7 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 .m-6 {
   margin: 6rem !important; }
 
-.mt-6,
+.mt-6, #testimonial-archive .testimonial,
 .my-6 {
   margin-top: 6rem !important; }
 
@@ -6292,7 +6292,8 @@ body:not(.home) .postcard, #static-header .actions,
 #comments-navigation.nav .post-previous,
 #comments-navigation.nav .comments-previous,
 .mx-auto,
-.aligncenter {
+.aligncenter,
+#testimonial-archive .testimonial-image {
   margin-right: auto !important; }
 
 .mb-auto,
@@ -6303,7 +6304,8 @@ body:not(.home) .postcard, #static-header .actions,
 #comments-navigation.nav .post-next,
 #comments-navigation.nav .comments-next, #top-menu .navbar-nav,
 .mx-auto,
-.aligncenter {
+.aligncenter,
+#testimonial-archive .testimonial-image {
   margin-left: auto !important; }
 
 @media (min-width: 576px) {
@@ -10062,6 +10064,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: multiply; }
+
+#testimonial-archive .testimonial-image {
+  margin-top: -25%; }
 
 #site-info {
   background-color: #e9ecef; }
