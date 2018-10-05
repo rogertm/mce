@@ -10046,8 +10046,39 @@ body {
 #comments #cancel-comment-reply-link {
   font-family: "Dosis", sans-serif; }
 
-#top-menu .navbar * {
-  font-family: "Dosis", sans-serif; }
+#top-menu {
+  /* 	#nav-searchform{
+  		@extend .w-100;
+  		padding: .12rem 0;
+  		position: relative;
+  		.input-group{
+  			@extend .pr-4;
+  			#nbs{
+  				@extend .bg-transparent;
+  				@extend .border-top-0;
+  				@extend .border-left-0;
+  				@extend .border-right-0;
+  				@extend .border-bottom;
+  				@extend .border-secondary;
+  				@extend .rounded-0;
+  				@extend .text-light;
+  			}
+  		}
+  		.actions{
+  			position: absolute;
+  			right: 0;
+  			top: 0;
+  			@extend .py-2;
+  			a{
+  				@extend .text-secondary;
+  				&:hover{
+  					@extend .text-light;
+  				}
+  			}
+  		}
+  	} */ }
+  #top-menu .navbar * {
+    font-family: "Dosis", sans-serif; }
 
 #static-header-inner {
   background-attachment: fixed;

@@ -18,5 +18,6 @@ require( get_stylesheet_directory() . '/templates/chronicles.php' );
 require( get_stylesheet_directory() . '/templates/post.php' );
 require( get_stylesheet_directory() . '/templates/testimonial.php' );
 require( get_stylesheet_directory() . '/templates/postcard.php' );
+require( get_stylesheet_directory() . '/templates/search.php' );
 require( get_stylesheet_directory() . '/templates/global.php' );
 ?>

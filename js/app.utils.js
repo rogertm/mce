@@ -124,6 +124,34 @@ jQuery(document).ready(function($) {
 		});
 	});
 
+	// Navbar Search
+/*	$('#site-top-menu .menu-item-search').click(function(event){
+		event.preventDefault();
+		var item 		= $(this)
+			site_title 	= $('#site-title .navbar-brand')
+			site_menu 	= $('#site-top-menu')
+			menu 		= $('#menu-top-menu')
+			form 		= $('#nav-searchform');
+			input 		= $('#nav-searchform #nbs');
+		$(site_menu).removeClass('navbar-collapse').addClass('w-100').css('display','block');
+		$(menu).addClass('d-none');
+		$(site_title).addClass('d-none');
+		$(form).removeClass('d-none d-xl-none d-lg-none d-md-block d-sm-block').addClass('d-block');
+		$(input).focus();
+	});
+	$('#nav-searchform .close-search').click(function(event){
+		event.preventDefault();
+		var item 		= $(this)
+			site_title 	= $('#site-title .navbar-brand')
+			site_menu 	= $('#site-top-menu')
+			menu 		= $('#menu-top-menu')
+			form 		= $('#nav-searchform');
+		$(site_menu).addClass('navbar-collapse').removeClass('w-100').css('display','none');
+		$(menu).removeClass('d-none');
+		$(site_title).removeClass('d-none');
+		$(form).removeClass('d-block').addClass('d-none d-xl-none d-lg-none d-md-block d-sm-block');
+	});*/
+
 	// Run function on resize
 	$(window).resize(function(){
 		mce_fullscreen_hero();
