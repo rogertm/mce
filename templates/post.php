@@ -51,7 +51,7 @@ function mce_latests_post(){
 					<?php endif; ?>
 					<div class="<?php echo $content_grid; ?>">
 						<header>
-							<h2 class="entry-title mt-0"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 't_em' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+							<h2 class="entry-title mt-0"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'mce' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 						</header>
 						<?php the_excerpt(); ?>
 					</div>

@@ -1,0 +1,471 @@
+# Copyright (C) 2018 RogerTM
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: MCE 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/mce\n"
+"POT-Creation-Date: 2018-10-05 09:34-0400\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-10-05 09:57-0400\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Last-Translator: RogerTM <hi@themingisprose.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es_ES\n"
+
+#: admin/custom-content.php:41
+msgid "Page Blog"
+msgstr "Página Blog"
+
+#: admin/custom-content.php:42
+msgid "Blog"
+msgstr "Blog"
+
+#: admin/custom-content.php:50
+msgid "Page History"
+msgstr "Página Historia"
+
+#: admin/custom-content.php:51
+msgid "History"
+msgstr "Historia"
+
+#: admin/custom-content.php:59
+msgid "Page Chronicles"
+msgstr "Página Crónicas"
+
+#: admin/custom-content.php:60 admin/custom-content.php:151
+msgid "Chronicles"
+msgstr "Crónicas"
+
+#: admin/custom-content.php:68
+msgid "Page Groups"
+msgstr "Página Grupos"
+
+#: admin/custom-content.php:69 meta/meta-post.php:130
+msgid "Groups"
+msgstr "Grupos"
+
+#: admin/custom-content.php:77
+msgid "Page Galleries"
+msgstr "Página Galerías"
+
+#: admin/custom-content.php:78 meta/meta-post.php:142
+msgid "Galleries"
+msgstr "Galerías"
+
+#: admin/custom-content.php:86
+msgid "Page Routes"
+msgstr "Página Rutas"
+
+#: admin/custom-content.php:87 meta/meta-post.php:136
+msgid "Routes"
+msgstr "Rutas"
+
+#: admin/custom-content.php:95
+msgid "Page Contact"
+msgstr "Página Contacto"
+
+#: admin/custom-content.php:96
+msgid "Contact"
+msgstr "Contacto"
+
+#: admin/custom-content.php:104
+msgid "Page FAQ"
+msgstr "Página FAQ"
+
+#: admin/custom-content.php:105
+msgid "FAQ"
+msgstr "FAQ"
+
+#: admin/custom-content.php:113
+msgid "Page Testimonial"
+msgstr "Página Testimonios"
+
+#: admin/custom-content.php:114
+msgid "Testimonial"
+msgstr "Testimonios"
+
+#: admin/custom-content.php:150
+msgid "Term Category Chronicles"
+msgstr "Término Categoría Crónicas"
+
+#: admin/custom-content.php:156
+msgid "Term Degree Easy"
+msgstr "Término Grado de Dificultad Fácil"
+
+#: admin/custom-content.php:157
+msgid "Easy"
+msgstr "Fácil"
+
+#: admin/custom-content.php:162
+msgid "Term Degree Middle"
+msgstr "Término Grado de Dificultad Medio"
+
+#: admin/custom-content.php:163
+msgid "Middle"
+msgstr "Medio"
+
+#: admin/custom-content.php:168
+msgid "Term Degree Difficult"
+msgstr "Término Grado de Dificultad Difícil"
+
+#: admin/custom-content.php:169
+msgid "Difficult"
+msgstr "Difícil"
+
+#: admin/custom-content.php:174
+msgid "Term Degree Extreme"
+msgstr "Término Grado de Dificultad Extremo"
+
+#: admin/custom-content.php:175
+msgid "Extreme"
+msgstr "Extremo"
+
+#: admin/custom-content.php:180
+msgid "Term Zone Occidental"
+msgstr "Término Zona Occidental"
+
+#: admin/custom-content.php:181
+msgid "Occidental"
+msgstr "Occidental"
+
+#: admin/custom-content.php:186
+msgid "Term Zone Central"
+msgstr "Término Zona Central"
+
+#: admin/custom-content.php:187
+msgid "Central"
+msgstr "Central"
+
+#: admin/custom-content.php:192
+msgid "Term Zone Oriental"
+msgstr "Término Zona Oriental"
+
+#: admin/custom-content.php:193
+msgid "Oriental"
+msgstr "Oriental"
+
+#: admin/custom-content.php:208
+msgid "Custom Pages"
+msgstr "Páginas Personalizadas"
+
+#: admin/custom-content.php:216 admin/custom-content.php:259
+msgid "&mdash; Select &mdash;"
+msgstr "&mdash; Seleccionar &mdash;"
+
+#: admin/custom-content.php:243 admin/custom-content.php:269
+msgid "Edit"
+msgstr "Editar"
+
+#: admin/custom-content.php:244 admin/custom-content.php:270
+msgid "View"
+msgstr "Ver"
+
+#: admin/custom-content.php:251
+msgid "Custom Terms"
+msgstr "Términos Personalizados"
+
+#: admin/functions.php:20
+msgid "Custom Content"
+msgstr "Contenido Personalizado"
+
+#: inc/post-types.php:22
+msgctxt "post type singular name"
+msgid "Group"
+msgstr "Grupo"
+
+#: inc/post-types.php:23
+msgctxt "post type general name"
+msgid "Groups"
+msgstr "Grupos"
+
+#: inc/post-types.php:26
+msgctxt "post type slug"
+msgid "group"
+msgstr "grupo"
+
+#: inc/post-types.php:31
+msgctxt "post type singular name"
+msgid "Route"
+msgstr "Ruta"
+
+#: inc/post-types.php:32
+msgctxt "post type general name"
+msgid "Routes"
+msgstr "Rutas"
+
+#: inc/post-types.php:35
+msgctxt "post type slug"
+msgid "route"
+msgstr "ruta"
+
+#: inc/post-types.php:40
+msgctxt "post type singular name"
+msgid "Gallery"
+msgstr "Galería"
+
+#: inc/post-types.php:41
+msgctxt "post type general name"
+msgid "Galleries"
+msgstr "Galerías"
+
+#: inc/post-types.php:44
+msgctxt "post type slug"
+msgid "gallery"
+msgstr "galeria"
+
+#: inc/post-types.php:49
+msgctxt "post type singular name"
+msgid "Postcard"
+msgstr "Postal"
+
+#: inc/post-types.php:50
+msgctxt "post type general name"
+msgid "Postcards"
+msgstr "Postales"
+
+#: inc/post-types.php:53
+msgctxt "post type slug"
+msgid "postcard"
+msgstr "postal"
+
+#: inc/post-types.php:58
+msgctxt "post type singular name"
+msgid "FAQ"
+msgstr "FAQ"
+
+#: inc/post-types.php:59
+msgctxt "post type general name"
+msgid "FAQs"
+msgstr "FAQs"
+
+#: inc/post-types.php:62
+msgctxt "post type slug"
+msgid "faq"
+msgstr "faq"
+
+#: inc/post-types.php:67
+msgctxt "post type singular name"
+msgid "Testimonial"
+msgstr "Testimonio"
+
+#: inc/post-types.php:68
+msgctxt "post type general name"
+msgid "Testimonials"
+msgstr "Testimonios"
+
+#: inc/post-types.php:71
+msgctxt "post type slug"
+msgid "testimonial"
+msgstr "testimonio"
+
+#: inc/post-types.php:81 inc/post-types.php:146
+msgid "All %s"
+msgstr "Todos %s"
+
+#: inc/post-types.php:82
+msgid "Add new"
+msgstr "Agregar nuevo"
+
+#: inc/post-types.php:83
+msgid "Add new %s"
+msgstr "Agregar nuveo %s"
+
+#: inc/post-types.php:84 inc/post-types.php:149
+msgid "Edit %s"
+msgstr "Editar %s"
+
+#: inc/post-types.php:85
+msgid "New %s"
+msgstr "Nuevo %s"
+
+#: inc/post-types.php:86 inc/post-types.php:151
+msgid "View %s"
+msgstr "Ver %"
+
+#: inc/post-types.php:87 inc/post-types.php:144
+msgid "Search %s"
+msgstr "Buscar %s"
+
+#: inc/post-types.php:88 inc/post-types.php:154
+msgid "No %s found"
+msgstr "No se encontraron %s"
+
+#: inc/post-types.php:89
+msgid "No %s found in trash"
+msgstr "No se encontraron %s en la papelera"
+
+#: inc/post-types.php:90 inc/post-types.php:147 inc/post-types.php:148
+msgid "Parent %s"
+msgstr "%s superior"
+
+#: inc/post-types.php:118
+msgctxt "taxonomy singular name"
+msgid "Degree of Difficulty"
+msgstr "Grado de Dificultad"
+
+#: inc/post-types.php:119
+msgctxt "taxonomy general name"
+msgid "Degrees of Difficulty"
+msgstr "Grados de Dificultad"
+
+#: inc/post-types.php:129
+msgctxt "taxonomy singular name"
+msgid "Zone"
+msgstr "Zona"
+
+#: inc/post-types.php:130
+msgctxt "taxonomy general name"
+msgid "Zones"
+msgstr "Zonas"
+
+#: inc/post-types.php:145
+msgid "Popular %s"
+msgstr "%s Populares"
+
+#: inc/post-types.php:150
+msgid "Update %s"
+msgstr "Actualizar %s"
+
+#: inc/post-types.php:152
+msgid "Add New %s"
+msgstr "Agregar Nuevo %s"
+
+#: inc/post-types.php:153
+msgid "New %s name"
+msgstr "Nuevo nombre %s"
+
+#: loop/loop-mce-faq.php:29
+msgid "Table of Content"
+msgstr "Tabla de Contenidos"
+
+#: loop/loop-mce-faq.php:42
+msgid "Back to top"
+msgstr "Subir"
+
+#: meta/meta-boxes.php:20
+msgid "Post Data"
+msgstr "Datos de la Entrada"
+
+#: meta/meta-boxes.php:23
+msgid "Postcard Data"
+msgstr "Datos de la Postal"
+
+#: meta/meta-post.php:169
+msgid "Attach %s to this post"
+msgstr "Adjuntar %s a esta entrada"
+
+#: meta/meta-post.php:171
+msgid "&mdash; Select %s &mdash;"
+msgstr "&mdash; Seleccionar %s &mdash;"
+
+#: meta/meta-postcard.php:22
+msgid "Source or author"
+msgstr "Fuenta o autor"
+
+#: meta/meta-postcard.php:27
+msgid "Photo by"
+msgstr "Foto por"
+
+#: meta/meta-postcard.php:84 meta/meta-postcard.php:85
+msgctxt "Postcard title"
+msgid "Postcard %s"
+msgstr "Postal %s"
+
+#: meta/meta-postcard.php:104
+msgid "Content"
+msgstr "Contenido"
+
+#: meta/meta-postcard.php:105
+msgid "Thumbnail"
+msgstr "Miniatura"
+
+#: templates/chronicles.php:46 templates/route.php:50 templates/route.php:63
+msgid "Read more"
+msgstr "Leer más"
+
+#: templates/global.php:40
+msgid "Day"
+msgstr "Día"
+
+#: templates/global.php:44
+msgid "Month"
+msgstr "Mes"
+
+#: templates/global.php:48
+msgid "Year"
+msgstr "Año"
+
+#: templates/global.php:58
+msgid "Author"
+msgstr "Autor"
+
+#: templates/global.php:64
+msgid "Search Results for"
+msgstr "Resultados de búsqueda para"
+
+#: templates/global.php:101
+msgid "Go to top"
+msgstr "Subir"
+
+#: templates/post.php:34
+msgid "Latests Blog Entries"
+msgstr "Últimas entradas del Blog"
+
+#: templates/post.php:54
+msgid "Permalink to %s"
+msgstr "Enlace permanenta a %s"
+
+#: templates/post.php:88
+msgid "You may also read:"
+msgstr "También te puede interesar:"
+
+#: templates/postcard.php:36
+msgid "Photo by: %s"
+msgstr "Foto por: %s"
+
+#: templates/route.php:42
+msgid "Difficult Degree"
+msgstr "Grado de Dificultad"
+
+#: templates/route.php:55
+msgid "Geographic Zone"
+msgstr "Zona Geográfica"
+
+#: templates/testimonial.php:31
+msgid "Testimonials"
+msgstr "Testimonios"
+
+#: templates/testimonial.php:53
+msgid "Previous"
+msgstr "Anterior"
+
+#: templates/testimonial.php:57
+msgid "Next"
+msgstr "Siguiente"
+
+#. Theme Name of the plugin/theme
+msgid "MCE"
+msgstr "MCE"
+
+#. Theme URI of the plugin/theme
+msgid "https://excursionismocuba.com"
+msgstr "https://excursionismocuba.com"
+
+#. Description of the plugin/theme
+msgid "MCE WordPress Theme"
+msgstr "MCE WordPress Theme"
+
+#. Author of the plugin/theme
+msgid "RogerTM"
+msgstr "RogerTM"
+
+#. Author URI of the plugin/theme
+msgid "https://themingisprose.com"
+msgstr "https://themingisprose.com"
+
+#. Template Name of the plugin/theme
+msgid "MCE Custom Page"
+msgstr "MCE Páginas Personalizadas"
