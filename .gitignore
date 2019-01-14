@@ -7,6 +7,5 @@ cache/*.*
 *.sublime-workspace
 TODO
 node_modules/*
-!node_modules/@fancyapps
 !node_modules/select2/
 !node_modules/jquery.scrollto/

@@ -85,25 +85,6 @@ jQuery(document).ready(function($) {
 	}
 	mce_menu_scroll( $('#top-menu'), $('#header').outerHeight() );
 
-	// Fancybox
-	$().fancybox({
-		selector: '.gallery .gallery-item',
-		infobar: false,
-		smallBtn: false,
-		closeExisting: true,
-		loop: true,
-		toolbar: true,
-		buttons: [
-			"zoom",
-			"share",
-			"slideShow",
-			"fullScreen",
-			"download",
-			"thumbs",
-			"close"
-		],
-	});
-
 	/** Go to top */
 	var gotoTop = $('#gototop');
 	$(window).scroll(function(){

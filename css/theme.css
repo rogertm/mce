@@ -297,7 +297,7 @@ template {
   display: none !important; }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, #static-header-text .static-header-content, .h3, .h4, .h5, .h6 {
+.h1, .h2, #static-header .hero-body p, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: "Dosis", sans-serif;
   font-weight: 500;
@@ -307,7 +307,7 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1 {
   font-size: 2.5rem; }
 
-h2, .h2, #static-header-text .static-header-content {
+h2, .h2, #static-header .hero-body p {
   font-size: 2rem; }
 
 h3, .h3 {
@@ -341,7 +341,7 @@ h6, .h6 {
   font-weight: 300;
   line-height: 1.2; }
 
-.display-4, #static-header-text header h2 {
+.display-4, #static-header .hero-heading {
   font-size: 3.5rem;
   font-weight: 300;
   line-height: 1.2; }
@@ -363,7 +363,7 @@ mark,
   padding: 0.2em;
   background-color: #fcf8e3; }
 
-.list-unstyled, #related-posts .related-posts-list, #comments .children, .widget-container ul, .widget-container ol {
+.list-unstyled, #related-posts .related-posts-list, #comments .children, .widget ul, .widget ol {
   padding-left: 0;
   list-style: none; }
 
@@ -1189,22 +1189,22 @@ pre {
 
   .offset-xl-11 {
     margin-left: 91.6666666667%; } }
-.table, .widget-container table {
+.table, .widget table {
   width: 100%;
   margin-bottom: 1rem;
   background-color: transparent; }
-  .table th, .widget-container table th,
+  .table th, .widget table th,
   .table td,
-  .widget-container table td {
+  .widget table td {
     padding: 0.75rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6; }
-  .table thead th, .widget-container table thead th {
+  .table thead th, .widget table thead th {
     vertical-align: bottom;
     border-bottom: 2px solid #dee2e6; }
-  .table tbody + tbody, .widget-container table tbody + tbody {
+  .table tbody + tbody, .widget table tbody + tbody {
     border-top: 2px solid #dee2e6; }
-  .table .table, .widget-container table .table, .table .widget-container table, .widget-container .table table, .widget-container table table {
+  .table .table, .widget table .table, .table .widget table, .widget .table table, .widget table table {
     background-color: #fff; }
 
 .table-sm th,
@@ -1331,11 +1331,11 @@ pre {
   .table-hover .table-active:hover > th {
     background-color: rgba(0, 0, 0, 0.075); }
 
-.table .thead-dark th, .widget-container table .thead-dark th {
+.table .thead-dark th, .widget table .thead-dark th {
   color: #fff;
   background-color: #212529;
   border-color: #32383e; }
-.table .thead-light th, .widget-container table .thead-light th {
+.table .thead-light th, .widget table .thead-light th {
   color: #495057;
   background-color: #e9ecef;
   border-color: #dee2e6; }
@@ -2083,49 +2083,49 @@ fieldset:disabled #comments a#cancel-comment-reply-link,
     .btn-outline-danger:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-danger.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5); }
 
-.btn-outline-light, #static-header .actions .btn, #static-header .actions #commentform .submit, #commentform #static-header .actions .submit, #static-header .actions #comments .comment-reply-link, #comments #static-header .actions .comment-reply-link,
-#static-header .actions #comments #cancel-comment-reply-link,
-#comments #static-header .actions #cancel-comment-reply-link {
+.btn-outline-light, #static-header .hero-footer .btn, #static-header .hero-footer #commentform .submit, #commentform #static-header .hero-footer .submit, #static-header .hero-footer #comments .comment-reply-link, #comments #static-header .hero-footer .comment-reply-link,
+#static-header .hero-footer #comments #cancel-comment-reply-link,
+#comments #static-header .hero-footer #cancel-comment-reply-link {
   color: #f8f9fa;
   background-color: transparent;
   background-image: none;
   border-color: #f8f9fa; }
-  .btn-outline-light:hover, #static-header .actions .btn:hover, #static-header .actions #commentform .submit:hover, #commentform #static-header .actions .submit:hover, #static-header .actions #comments .comment-reply-link:hover, #comments #static-header .actions .comment-reply-link:hover,
-  #static-header .actions #comments #cancel-comment-reply-link:hover,
-  #comments #static-header .actions #cancel-comment-reply-link:hover {
+  .btn-outline-light:hover, #static-header .hero-footer .btn:hover, #static-header .hero-footer #commentform .submit:hover, #commentform #static-header .hero-footer .submit:hover, #static-header .hero-footer #comments .comment-reply-link:hover, #comments #static-header .hero-footer .comment-reply-link:hover,
+  #static-header .hero-footer #comments #cancel-comment-reply-link:hover,
+  #comments #static-header .hero-footer #cancel-comment-reply-link:hover {
     color: #212529;
     background-color: #f8f9fa;
     border-color: #f8f9fa; }
-  .btn-outline-light:focus, #static-header .actions .btn:focus, #static-header .actions #commentform .submit:focus, #commentform #static-header .actions .submit:focus, #static-header .actions #comments .comment-reply-link:focus, #comments #static-header .actions .comment-reply-link:focus,
-  #static-header .actions #comments #cancel-comment-reply-link:focus,
-  #comments #static-header .actions #cancel-comment-reply-link:focus, .btn-outline-light.focus, #static-header .actions .focus.btn, #static-header .actions #commentform .focus.submit, #commentform #static-header .actions .focus.submit, #static-header .actions #comments .focus.comment-reply-link, #comments #static-header .actions .focus.comment-reply-link,
-  #static-header .actions #comments .focus#cancel-comment-reply-link,
-  #comments #static-header .actions .focus#cancel-comment-reply-link {
+  .btn-outline-light:focus, #static-header .hero-footer .btn:focus, #static-header .hero-footer #commentform .submit:focus, #commentform #static-header .hero-footer .submit:focus, #static-header .hero-footer #comments .comment-reply-link:focus, #comments #static-header .hero-footer .comment-reply-link:focus,
+  #static-header .hero-footer #comments #cancel-comment-reply-link:focus,
+  #comments #static-header .hero-footer #cancel-comment-reply-link:focus, .btn-outline-light.focus, #static-header .hero-footer .focus.btn, #static-header .hero-footer #commentform .focus.submit, #commentform #static-header .hero-footer .focus.submit, #static-header .hero-footer #comments .focus.comment-reply-link, #comments #static-header .hero-footer .focus.comment-reply-link,
+  #static-header .hero-footer #comments .focus#cancel-comment-reply-link,
+  #comments #static-header .hero-footer .focus#cancel-comment-reply-link {
     box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5); }
-  .btn-outline-light.disabled, #static-header .actions .disabled.btn, #static-header .actions #commentform .disabled.submit, #commentform #static-header .actions .disabled.submit, #static-header .actions #comments .disabled.comment-reply-link, #comments #static-header .actions .disabled.comment-reply-link,
-  #static-header .actions #comments .disabled#cancel-comment-reply-link,
-  #comments #static-header .actions .disabled#cancel-comment-reply-link, .btn-outline-light:disabled, #static-header .actions .btn:disabled, #static-header .actions #commentform .submit:disabled, #commentform #static-header .actions .submit:disabled, #static-header .actions #comments .comment-reply-link:disabled, #comments #static-header .actions .comment-reply-link:disabled,
-  #static-header .actions #comments #cancel-comment-reply-link:disabled,
-  #comments #static-header .actions #cancel-comment-reply-link:disabled {
+  .btn-outline-light.disabled, #static-header .hero-footer .disabled.btn, #static-header .hero-footer #commentform .disabled.submit, #commentform #static-header .hero-footer .disabled.submit, #static-header .hero-footer #comments .disabled.comment-reply-link, #comments #static-header .hero-footer .disabled.comment-reply-link,
+  #static-header .hero-footer #comments .disabled#cancel-comment-reply-link,
+  #comments #static-header .hero-footer .disabled#cancel-comment-reply-link, .btn-outline-light:disabled, #static-header .hero-footer .btn:disabled, #static-header .hero-footer #commentform .submit:disabled, #commentform #static-header .hero-footer .submit:disabled, #static-header .hero-footer #comments .comment-reply-link:disabled, #comments #static-header .hero-footer .comment-reply-link:disabled,
+  #static-header .hero-footer #comments #cancel-comment-reply-link:disabled,
+  #comments #static-header .hero-footer #cancel-comment-reply-link:disabled {
     color: #f8f9fa;
     background-color: transparent; }
-  .btn-outline-light:not(:disabled):not(.disabled):active, #static-header .actions .btn:not(:disabled):not(.disabled):active, #static-header .actions #commentform .submit:not(:disabled):not(.disabled):active, #commentform #static-header .actions .submit:not(:disabled):not(.disabled):active, #static-header .actions #comments .comment-reply-link:not(:disabled):not(.disabled):active, #comments #static-header .actions .comment-reply-link:not(:disabled):not(.disabled):active,
-  #static-header .actions #comments #cancel-comment-reply-link:not(:disabled):not(.disabled):active,
-  #comments #static-header .actions #cancel-comment-reply-link:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active, #static-header .actions .btn:not(:disabled):not(.disabled).active, #static-header .actions #commentform .submit:not(:disabled):not(.disabled).active, #commentform #static-header .actions .submit:not(:disabled):not(.disabled).active, #static-header .actions #comments .comment-reply-link:not(:disabled):not(.disabled).active, #comments #static-header .actions .comment-reply-link:not(:disabled):not(.disabled).active,
-  #static-header .actions #comments #cancel-comment-reply-link:not(:disabled):not(.disabled).active,
-  #comments #static-header .actions #cancel-comment-reply-link:not(:disabled):not(.disabled).active, .show > .btn-outline-light.dropdown-toggle, #static-header .actions .show > .dropdown-toggle.btn, #static-header .actions #commentform .show > .dropdown-toggle.submit, #commentform #static-header .actions .show > .dropdown-toggle.submit, #static-header .actions #comments .show > .dropdown-toggle.comment-reply-link, #comments #static-header .actions .show > .dropdown-toggle.comment-reply-link,
-  #static-header .actions #comments .show > .dropdown-toggle#cancel-comment-reply-link,
-  #comments #static-header .actions .show > .dropdown-toggle#cancel-comment-reply-link {
+  .btn-outline-light:not(:disabled):not(.disabled):active, #static-header .hero-footer .btn:not(:disabled):not(.disabled):active, #static-header .hero-footer #commentform .submit:not(:disabled):not(.disabled):active, #commentform #static-header .hero-footer .submit:not(:disabled):not(.disabled):active, #static-header .hero-footer #comments .comment-reply-link:not(:disabled):not(.disabled):active, #comments #static-header .hero-footer .comment-reply-link:not(:disabled):not(.disabled):active,
+  #static-header .hero-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled):active,
+  #comments #static-header .hero-footer #cancel-comment-reply-link:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active, #static-header .hero-footer .btn:not(:disabled):not(.disabled).active, #static-header .hero-footer #commentform .submit:not(:disabled):not(.disabled).active, #commentform #static-header .hero-footer .submit:not(:disabled):not(.disabled).active, #static-header .hero-footer #comments .comment-reply-link:not(:disabled):not(.disabled).active, #comments #static-header .hero-footer .comment-reply-link:not(:disabled):not(.disabled).active,
+  #static-header .hero-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled).active,
+  #comments #static-header .hero-footer #cancel-comment-reply-link:not(:disabled):not(.disabled).active, .show > .btn-outline-light.dropdown-toggle, #static-header .hero-footer .show > .dropdown-toggle.btn, #static-header .hero-footer #commentform .show > .dropdown-toggle.submit, #commentform #static-header .hero-footer .show > .dropdown-toggle.submit, #static-header .hero-footer #comments .show > .dropdown-toggle.comment-reply-link, #comments #static-header .hero-footer .show > .dropdown-toggle.comment-reply-link,
+  #static-header .hero-footer #comments .show > .dropdown-toggle#cancel-comment-reply-link,
+  #comments #static-header .hero-footer .show > .dropdown-toggle#cancel-comment-reply-link {
     color: #212529;
     background-color: #f8f9fa;
     border-color: #f8f9fa; }
-    .btn-outline-light:not(:disabled):not(.disabled):active:focus, #static-header .actions .btn:not(:disabled):not(.disabled):active:focus, #static-header .actions #commentform .submit:not(:disabled):not(.disabled):active:focus, #commentform #static-header .actions .submit:not(:disabled):not(.disabled):active:focus, #static-header .actions #comments .comment-reply-link:not(:disabled):not(.disabled):active:focus, #comments #static-header .actions .comment-reply-link:not(:disabled):not(.disabled):active:focus,
-    #static-header .actions #comments #cancel-comment-reply-link:not(:disabled):not(.disabled):active:focus,
-    #comments #static-header .actions #cancel-comment-reply-link:not(:disabled):not(.disabled):active:focus, .btn-outline-light:not(:disabled):not(.disabled).active:focus, #static-header .actions .btn:not(:disabled):not(.disabled).active:focus, #static-header .actions #commentform .submit:not(:disabled):not(.disabled).active:focus, #commentform #static-header .actions .submit:not(:disabled):not(.disabled).active:focus, #static-header .actions #comments .comment-reply-link:not(:disabled):not(.disabled).active:focus, #comments #static-header .actions .comment-reply-link:not(:disabled):not(.disabled).active:focus,
-    #static-header .actions #comments #cancel-comment-reply-link:not(:disabled):not(.disabled).active:focus,
-    #comments #static-header .actions #cancel-comment-reply-link:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-light.dropdown-toggle:focus, #static-header .actions .show > .dropdown-toggle.btn:focus, #static-header .actions #commentform .show > .dropdown-toggle.submit:focus, #commentform #static-header .actions .show > .dropdown-toggle.submit:focus, #static-header .actions #comments .show > .dropdown-toggle.comment-reply-link:focus, #comments #static-header .actions .show > .dropdown-toggle.comment-reply-link:focus,
-    #static-header .actions #comments .show > .dropdown-toggle#cancel-comment-reply-link:focus,
-    #comments #static-header .actions .show > .dropdown-toggle#cancel-comment-reply-link:focus {
+    .btn-outline-light:not(:disabled):not(.disabled):active:focus, #static-header .hero-footer .btn:not(:disabled):not(.disabled):active:focus, #static-header .hero-footer #commentform .submit:not(:disabled):not(.disabled):active:focus, #commentform #static-header .hero-footer .submit:not(:disabled):not(.disabled):active:focus, #static-header .hero-footer #comments .comment-reply-link:not(:disabled):not(.disabled):active:focus, #comments #static-header .hero-footer .comment-reply-link:not(:disabled):not(.disabled):active:focus,
+    #static-header .hero-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled):active:focus,
+    #comments #static-header .hero-footer #cancel-comment-reply-link:not(:disabled):not(.disabled):active:focus, .btn-outline-light:not(:disabled):not(.disabled).active:focus, #static-header .hero-footer .btn:not(:disabled):not(.disabled).active:focus, #static-header .hero-footer #commentform .submit:not(:disabled):not(.disabled).active:focus, #commentform #static-header .hero-footer .submit:not(:disabled):not(.disabled).active:focus, #static-header .hero-footer #comments .comment-reply-link:not(:disabled):not(.disabled).active:focus, #comments #static-header .hero-footer .comment-reply-link:not(:disabled):not(.disabled).active:focus,
+    #static-header .hero-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled).active:focus,
+    #comments #static-header .hero-footer #cancel-comment-reply-link:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-light.dropdown-toggle:focus, #static-header .hero-footer .show > .dropdown-toggle.btn:focus, #static-header .hero-footer #commentform .show > .dropdown-toggle.submit:focus, #commentform #static-header .hero-footer .show > .dropdown-toggle.submit:focus, #static-header .hero-footer #comments .show > .dropdown-toggle.comment-reply-link:focus, #comments #static-header .hero-footer .show > .dropdown-toggle.comment-reply-link:focus,
+    #static-header .hero-footer #comments .show > .dropdown-toggle#cancel-comment-reply-link:focus,
+    #comments #static-header .hero-footer .show > .dropdown-toggle#cancel-comment-reply-link:focus {
       box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5); }
 
 .btn-outline-dark {
@@ -2167,9 +2167,9 @@ fieldset:disabled #comments a#cancel-comment-reply-link,
     pointer-events: none; }
 
 .btn-lg, .btn-group-lg > .btn, #commentform .btn-group-lg > .submit, #comments .btn-group-lg > .comment-reply-link,
-#comments .btn-group-lg > #cancel-comment-reply-link, #static-header .actions .btn, #static-header .actions #commentform .submit, #commentform #static-header .actions .submit, #static-header .actions #comments .comment-reply-link, #comments #static-header .actions .comment-reply-link,
-#static-header .actions #comments #cancel-comment-reply-link,
-#comments #static-header .actions #cancel-comment-reply-link {
+#comments .btn-group-lg > #cancel-comment-reply-link, #static-header .hero-footer .btn, #static-header .hero-footer #commentform .submit, #commentform #static-header .hero-footer .submit, #static-header .hero-footer #comments .comment-reply-link, #comments #static-header .hero-footer .comment-reply-link,
+#static-header .hero-footer #comments #cancel-comment-reply-link,
+#comments #static-header .hero-footer #cancel-comment-reply-link {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -2545,9 +2545,9 @@ input[type="button"].btn-block {
   padding-left: 0.375rem; }
 
 .btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, #commentform .btn-group-lg > .submit + .dropdown-toggle-split, #comments .btn-group-lg > .comment-reply-link + .dropdown-toggle-split,
-#comments .btn-group-lg > #cancel-comment-reply-link + .dropdown-toggle-split, #static-header .actions .btn + .dropdown-toggle-split, #static-header .actions #commentform .submit + .dropdown-toggle-split, #commentform #static-header .actions .submit + .dropdown-toggle-split, #static-header .actions #comments .comment-reply-link + .dropdown-toggle-split, #comments #static-header .actions .comment-reply-link + .dropdown-toggle-split,
-#static-header .actions #comments #cancel-comment-reply-link + .dropdown-toggle-split,
-#comments #static-header .actions #cancel-comment-reply-link + .dropdown-toggle-split {
+#comments .btn-group-lg > #cancel-comment-reply-link + .dropdown-toggle-split, #static-header .hero-footer .btn + .dropdown-toggle-split, #static-header .hero-footer #commentform .submit + .dropdown-toggle-split, #commentform #static-header .hero-footer .submit + .dropdown-toggle-split, #static-header .hero-footer #comments .comment-reply-link + .dropdown-toggle-split, #comments #static-header .hero-footer .comment-reply-link + .dropdown-toggle-split,
+#static-header .hero-footer #comments #cancel-comment-reply-link + .dropdown-toggle-split,
+#comments #static-header .hero-footer #cancel-comment-reply-link + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -4827,7 +4827,7 @@ button#maintenance-mode-alert:focus {
 .bg-white {
   background-color: #fff !important; }
 
-.bg-transparent, #front-page-widget-one, .fancybox-content {
+.bg-transparent, #front-page-widget-one {
   background-color: transparent !important; }
 
 .border, .author-info, .avatar {
@@ -4938,7 +4938,7 @@ button#maintenance-mode-alert:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, #static-header-inner {
+.d-flex, #static-header {
   display: flex !important; }
 
 .d-inline-flex {
@@ -5170,7 +5170,7 @@ button#maintenance-mode-alert:focus {
 .align-items-end {
   align-items: flex-end !important; }
 
-.align-items-center, #static-header-inner {
+.align-items-center, #static-header {
   align-items: center !important; }
 
 .align-items-baseline {
@@ -5774,12 +5774,12 @@ button#maintenance-mode-alert:focus {
 .mh-100 {
   max-height: 100% !important; }
 
-.m-0, #header #static-header {
+.m-0, #static-header {
   margin: 0 !important; }
 
 .mt-0,
 .my-0,
-#header #static-header.static-header-hero #static-header-text,
+#static-header.hero-header .hero-body,
 #main {
   margin-top: 0 !important; }
 
@@ -5789,7 +5789,7 @@ button#maintenance-mode-alert:focus {
 
 .mb-0,
 .my-0,
-#header #static-header.static-header-hero #static-header-text,
+#static-header.hero-header .hero-body,
 #main {
   margin-bottom: 0 !important; }
 
@@ -5827,7 +5827,7 @@ button#maintenance-mode-alert:focus {
 .mx-2 {
   margin-right: 0.5rem !important; }
 
-.mb-2, .widget-container ul li, .widget-container ol li,
+.mb-2, .widget ul li, .widget ol li,
 .my-2 {
   margin-bottom: 0.5rem !important; }
 
@@ -5840,8 +5840,8 @@ button#maintenance-mode-alert:focus {
 
 .mt-3, article,
 .my-3,
-#header #static-header #static-header-image,
-#header #static-header #static-header-text,
+#static-header.jumbotron .hero-thumbnail,
+#static-header.jumbotron .hero-body,
 .page-links,
 article .card-body .btn,
 article .card-body #commentform .submit,
@@ -5864,10 +5864,10 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 .mx-3 {
   margin-right: 1rem !important; }
 
-.mb-3, .gallery .gallery-item, #featured-widget-area .front-page-widget, #featured-widget-area.template-jumbotron .front-page-widget .widget-thumbnail, #featured-widget-area.template-features .widget-thumbnail, article .featured-post-thumbnail, article .entry-excerpt, article .author-info, article .card, .call-action, #maintenance-mode #countdowntimer,
+.mb-3, .gallery .gallery-item, article .featured-post-thumbnail, article .entry-excerpt, article .author-info, article .card, .call-action, #maintenance-mode #countdowntimer,
 .my-3,
-#header #static-header #static-header-image,
-#header #static-header #static-header-text,
+#static-header.jumbotron .hero-thumbnail,
+#static-header.jumbotron .hero-body,
 .page-links,
 article .card-body .btn,
 article .card-body #commentform .submit,
@@ -5922,7 +5922,7 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 .mx-5 {
   margin-right: 3rem !important; }
 
-.mb-5, #featured-widget-area.template-jumbotron #front-page-widget-one, #featured-widget-area.template-jumbotron #front-page-widget-one .widget-thumbnail, article, .author-info, .widget-container,
+.mb-5, article, .author-info, .widget,
 .my-5,
 #maintenance-mode,
 #featured-widget-area {
@@ -5955,7 +5955,7 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
   margin: 7rem !important; }
 
 .mt-7, body:not(.home) #main,
-body:not(.home) .postcard, #static-header .actions,
+body:not(.home) .postcard, #static-header .hero-footer,
 .my-7 {
   margin-top: 7rem !important; }
 
@@ -6149,7 +6149,7 @@ body:not(.home) .postcard, #static-header .actions,
 
 .pt-5,
 .py-5,
-#header #static-header.static-header-hero #static-header-text {
+#static-header.hero-header .hero-body {
   padding-top: 3rem !important; }
 
 .pr-5,
@@ -6158,7 +6158,7 @@ body:not(.home) .postcard, #static-header .actions,
 
 .pb-5,
 .py-5,
-#header #static-header.static-header-hero #static-header-text {
+#static-header.hero-header .hero-body {
   padding-bottom: 3rem !important; }
 
 .pl-5, #comments .children,
@@ -8225,11 +8225,11 @@ body:not(.home) .postcard, #static-header .actions,
 .text-left, .gallery .gallery-item {
   text-align: left !important; }
 
-.text-right, .widget-container .calendar_wrap #next {
+.text-right, .widget .calendar_wrap #next {
   text-align: right !important; }
 
 .text-center, #site-pagination.prev-next a, #posts-navigation.nav a,
-#comments-navigation.nav a, #site-info, #static-header, #featured-widget-area {
+#comments-navigation.nav a, .site-info, #static-header, #featured-widget-area {
   text-align: center !important; }
 
 @media (min-width: 576px) {
@@ -8328,10 +8328,10 @@ a.text-warning:hover, a.text-warning:focus {
 a.text-danger:hover, #commentform a.required:hover, a.text-danger:focus, #commentform a.required:focus {
   color: #bd2130 !important; }
 
-.text-light, #header #static-header.static-header-hero #static-header-text, .call-action, #maintenance-mode-alert a {
+.text-light, #static-header.hero-header .hero-body, .call-action, #maintenance-mode-alert a {
   color: #f8f9fa !important; }
 
-a.text-light:hover, #header #static-header.static-header-hero a#static-header-text:hover, a.call-action:hover, #maintenance-mode-alert a:hover, a.text-light:focus, #header #static-header.static-header-hero a#static-header-text:focus, a.call-action:focus, #maintenance-mode-alert a:focus {
+a.text-light:hover, #static-header.hero-header a.hero-body:hover, a.call-action:hover, #maintenance-mode-alert a:hover, a.text-light:focus, #static-header.hero-header a.hero-body:focus, a.call-action:focus, #maintenance-mode-alert a:focus {
   color: #dae0e5 !important; }
 
 .text-dark {
@@ -8417,11 +8417,11 @@ a.text-dark:hover, a.text-dark:focus {
   .badge {
     border: 1px solid #000; }
 
-  .table, .widget-container table {
+  .table, .widget table {
     border-collapse: collapse !important; }
-    .table td, .widget-container table td,
+    .table td, .widget table td,
     .table th,
-    .widget-container table th {
+    .widget table th {
       background-color: #fff !important; }
 
   .table-bordered th,
@@ -8436,7 +8436,7 @@ a.text-dark:hover, a.text-dark:focus {
     .table-dark tbody + tbody {
       border-color: #dee2e6; }
 
-  .table .thead-dark th, .widget-container table .thead-dark th {
+  .table .thead-dark th, .widget table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
 @font-face {
@@ -9942,12 +9942,13 @@ a .featured-post-thumbnail:hover, a .featured-post-thumbnail:focus {
 #header #header-image .container img {
   width: 100%;
   height: auto; }
+
 @media (min-width: 992px) {
-  #header #static-header.static-header-text-left #static-header-image {
+  #static-header.static-header-text-left .container .row > div:first-child {
     order: 12; }
-  #header #static-header.static-header-text-left #static-header-text {
+  #static-header.static-header-text-left .container .row > div:last-child {
     order: 1; } }
-#header #static-header.static-header-hero #static-header-inner {
+#static-header.hero-header {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #adb5bd; }
@@ -9968,9 +9969,9 @@ a .featured-post-thumbnail:hover, a .featured-post-thumbnail:focus {
     order: 12; } }
 
 @media (min-width: 992px) {
-  #featured-widget-area.template-features .front-page-widget:nth-child(2n) .widget-thumbnail {
+  #featured-widget-area.template-features .featurette:nth-child(2n) .featurette-thumbnail {
     order: 12; }
-  #featured-widget-area.template-features .front-page-widget:nth-child(2n) .front-page-widget-caption {
+  #featured-widget-area.template-features .featurette:nth-child(2n) .featurette-caption {
     order: 1; } }
 @media (max-width: 991.98px) {
   #featured-widget-area.template-cards .card-group {
@@ -10029,9 +10030,9 @@ article.sticky {
   background-size: cover; }
 
 @media (min-width: 992px) {
-  #site-info #site-info-right {
+  .site-info-right {
     text-align: right; }
-  #site-info #site-info-left {
+  .site-info-left {
     text-align: left; } }
 
 *:hover {
@@ -10080,7 +10081,7 @@ body {
   #top-menu .navbar * {
     font-family: "Dosis", sans-serif; }
 
-#static-header-inner {
+#static-header {
   background-attachment: fixed;
   background-blend-mode: multiply; }
 
@@ -10101,9 +10102,6 @@ body {
 
 #site-info {
   background-color: #e9ecef; }
-
-.fancybox-stage {
-  background-color: #000; }
 
 #gototop {
   display: none;

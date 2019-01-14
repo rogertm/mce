@@ -83,25 +83,25 @@ body{
 //
 #static-header{
 	@extend .text-center;
-	&-inner{
-		@extend .d-flex;
-		@extend .align-items-center;
-		background-attachment: fixed;
-		background-blend-mode: multiply;
-	}
-	&-text{
-		header h2{
+	@extend .d-flex;
+	@extend .align-items-center;
+	background-attachment: fixed;
+	background-blend-mode: multiply;
+	.hero{
+		&-heading{
 			@extend .display-4;
 		}
-		.static-header-content{
-			@extend .h2;
+		&-body{
+			p{
+				@extend .h2;
+			}
 		}
-	}
-	.actions{
-		@extend .mt-7;
-		.btn{
-			@extend .btn-outline-light;
-			@extend .btn-lg;
+		&-footer{
+			@extend .mt-7;
+			.btn{
+				@extend .btn-outline-light;
+				@extend .btn-lg;
+			}
 		}
 	}
 }
@@ -171,18 +171,6 @@ body{
 }
 #site-info{
 	background-color: $gray-200;
-}
-
-//
-// Fancybox
-//
-.fancybox{
-	&-stage{
-		background-color: #000;
-	}
-	&-content{
-		@extend .bg-transparent;
-	}
 }
 
 //
