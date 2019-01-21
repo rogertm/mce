@@ -35,7 +35,7 @@ function mce_front_page_postcard(){
 	$source			= ( get_post_meta( $id, 'mce_postcard_source', true ) ) ? '<footer class="blockquote-footer font-italic text-light">'. get_post_meta( $id, 'mce_postcard_source', true ) .'</footer>' : null;
 	$photo_by		= ( get_post_meta( $id, 'mce_postcard_photo_by', true ) ) ? '<div class="mb-5">'. sprintf( __( 'Photo by: %s', 'mce' ), get_post_meta( $id, 'mce_postcard_photo_by', true ) ) .'</div>' : null;
 ?>
-	<section id="postcard-<?php echo $id ?>" class="postcard hero text-light d-flex align-items-end justify-content-end" style="<?php echo $style ?>">
+	<section id="postcard-<?php echo $id ?>" class="postcard hero-section text-light d-flex align-items-end justify-content-end" style="<?php echo $style ?>">
 		<div class="postcard-body <?php t_em_container() ?>">
 			<div class="<?php echo t_em_grid( 8 ) .' '. t_em_grid( 4, '', true ) ?> mb-7">
 				<blockquote class="blockquote text-right">

@@ -4757,18 +4757,15 @@ button.bg-primary:hover,
 button.bg-primary:focus {
   background-color: #0062cc !important; }
 
-.bg-secondary, .hero,
-.hero-header {
+.bg-secondary, .hero-section, .hero-header {
   background-color: #6c757d !important; }
 
-a.bg-secondary:hover, a.hero:hover,
-a.hero-header:hover, a.bg-secondary:focus, a.hero:focus,
-a.hero-header:focus,
+a.bg-secondary:hover, a.hero-section:hover, a.hero-header:hover, a.bg-secondary:focus, a.hero-section:focus, a.hero-header:focus,
 button.bg-secondary:hover,
-button.hero:hover,
+button.hero-section:hover,
 button.hero-header:hover,
 button.bg-secondary:focus,
-button.hero:focus,
+button.hero-section:focus,
 button.hero-header:focus {
   background-color: #545b62 !important; }
 
@@ -10040,8 +10037,6 @@ article.sticky {
 
 body {
   cursor: default; }
-  body.admin-bar #top-menu {
-    top: 30px; }
 
 .btn, #commentform .submit, #comments .comment-reply-link,
 #comments #cancel-comment-reply-link {
@@ -10078,24 +10073,38 @@ body {
   			}
   		}
   	} */ }
+  .admin-bar #top-menu {
+    top: 30px; }
   #top-menu .navbar * {
     font-family: "Dosis", sans-serif; }
 
 #static-header {
   background-attachment: fixed;
-  background-blend-mode: multiply; }
+  background-blend-mode: multiply;
+  min-height: 100vh; }
 
 .home .testimonial,
 .home .route {
   background-color: #e9ecef; }
 
-.hero,
+.hero-section {
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply; }
+
 .hero-header {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: multiply; }
+  .hero-header.bg-full {
+    min-height: 75vh; }
+  .hero-header.bg-empty {
+    min-height: 50vh; }
 
 #testimonial-archive .testimonial-image {
   margin-top: -25%; }

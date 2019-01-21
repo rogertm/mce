@@ -19,11 +19,6 @@ body{
 			@extend .mt-7;
 		}
 	}
-	&.admin-bar{
-		#top-menu{
-			top: 30px;
-		}
-	}
 	cursor: default;
 }
 .btn{
@@ -37,6 +32,9 @@ body{
 // Navigation
 //
 #top-menu{
+	.admin-bar &{
+		top: 30px;
+	}
 	@extend .fixed-top;
 	.navbar{
 		*{
@@ -85,8 +83,11 @@ body{
 	@extend .text-center;
 	@extend .d-flex;
 	@extend .align-items-center;
-	background-attachment: fixed;
-	background-blend-mode: multiply;
+	background:{
+		attachment: fixed;
+		blend-mode: multiply;
+	}
+	min-height: 100vh;
 	.hero{
 		&-heading{
 			@extend .display-4;
@@ -127,18 +128,36 @@ body{
 		background-color: $gray-200;
 	}
 }
+.hero-section{
+	min-height: 100vh;
+	background:{
+		attachment: fixed;
+		size: cover;
+		repeat: no-repeat;
+		position: center;
+		blend-mode: multiply;
+	}
+	@extend .bg-secondary;
+}
 
 //
 // Singular
 //
-.hero,
 .hero-header{
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-blend-mode: multiply;
+	background:{
+		attachment: fixed;
+		size: cover;
+		repeat: no-repeat;
+		position: center;
+		blend-mode: multiply;
+	}
 	@extend .bg-secondary;
+	&.bg-full{
+		min-height: 75vh;
+	}
+	&.bg-empty{
+		min-height: 50vh;
+	}
 }
 
 //

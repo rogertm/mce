@@ -9,27 +9,8 @@
  * @since 			MCE 1.0
  */
 jQuery(document).ready(function($) {
-	// Hero Full Screen
-	function mce_fullscreen_hero(){
-		$('.home #static-header-inner, .hero').css({
-			'width': $(window).width(),
-			'height': $(window).height(),
-		});
-		$('.hero-header.bg-full').css({
-			'width': $(window).width(),
-			'min-height': $(window).height() / 1.5,
-			'height': 'auto',
-		});
-		$('.hero-header.bg-empty').css({
-			'width': $(window).width(),
-			'min-height': $(window).height() / 2,
-			'height': 'auto',
-		});
-	}
-	mce_fullscreen_hero();
-
 	// Make slider items the same high
-	function mce_item_hight(){
+	function mceItemHight(){
 		var values	= []
 			item 	= $('#testimonials-carousel .carousel-item');
 		item.each(function(index){
@@ -40,11 +21,11 @@ jQuery(document).ready(function($) {
 		var value = values.pop() + 25;
 		item.css( 'min-height', value );
 	};
-	mce_item_hight();
+	mceItemHight();
 
 	// Hide header on scroll down, show on scroll up
 	// http://jsfiddle.net/mariusc23/s6mLJ/31/
-	function mce_menu_scroll( target, height ){
+	function mceMenuScroll( target, height ){
 		var didScroll;
 		var lastScrollTop = 0;
 		var delta = 5;
@@ -83,7 +64,7 @@ jQuery(document).ready(function($) {
 		    lastScrollTop = st;
 		}
 	}
-	mce_menu_scroll( $('#top-menu'), $('#header').outerHeight() );
+	mceMenuScroll( $('#top-menu'), $('#header').outerHeight() );
 
 	/** Go to top */
 	var gotoTop = $('#gototop');
@@ -135,8 +116,7 @@ jQuery(document).ready(function($) {
 
 	// Run function on resize
 	$(window).resize(function(){
-		mce_fullscreen_hero();
-		mce_item_hight();
-		mce_menu_scroll( $('#top-menu'), $('#header').outerHeight() );
+		mceItemHight();
+		mceMenuScroll( $('#top-menu'), $('#header').outerHeight() );
 	});
 });

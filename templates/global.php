@@ -69,7 +69,7 @@ function mce_hero_header(){
 ?>
 	<div id="header-<?php echo $id ?>" class="hero-header text-light d-flex align-items-center <?php echo $classes ?>" style="<?php echo $style ?>">
 		<div class="<?php t_em_container() ?> text-center">
-			<header class="py-7">
+			<header>
 				<h1 class="display-3"><?php echo $title ?></h1>
 				<?php echo $excerpt ?>
 			</header>
