@@ -100,5 +100,5 @@ function mce_theme_options_validate( $input ){
 
 	return $input;
 }
-add_filter( 't_em_admin_filter_theme_options_validate', 'mce_theme_options_validate' );
+// add_filter( 't_em_admin_filter_theme_options_validate', 'mce_theme_options_validate' );
 ?>
