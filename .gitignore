@@ -6,6 +6,5 @@ cache/*.*
 *.sublime-project
 *.sublime-workspace
 TODO
-node_modules/*
-!node_modules/select2/
-!node_modules/jquery.scrollto/
+node_modules
+node_modules/*.*

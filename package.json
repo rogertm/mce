@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jquery.scrollto": "^2.1.2",
+    "select2": "^4.0.13"
+  }
+}
