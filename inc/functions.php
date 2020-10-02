@@ -27,6 +27,7 @@ function mce_setup(){
 	remove_action( 't_em_action_content_before', 't_em_header_archive_date', 15 );
 	remove_action( 't_em_action_content_before', 't_em_header_archive_search', 15 );
 	remove_action( 't_em_action_post_after', 't_em_single_related_posts' );
+	remove_action( 't_em_action_site_info_right', 't_em_display_user_social_network' );
 }
 add_action( 'after_setup_theme', 'mce_setup' );
 
@@ -81,4 +82,19 @@ function mce_redirect(){
 	endforeach;
 }
 add_action( 'template_redirect', 'mce_redirect' );
+
+function mce_social_network(){
+	$social = mce_social_network_options();
+?>
+	<div id="social-profiles" class="d-flex justify-content-end">
+<?php foreach ( $social as $key => $value ) : ?>
+	<a href="<?php echo t_em( $key ) ?>" class="mr-3">
+		<img src="<?php echo T_EM_CHILD_THEME_DIR_URL .'/assets/svg/'. $value['svg'] ?>">
+	</a>
+<?php endforeach; ?>
+	</div>
+<?php
+}
+add_action( 't_em_action_maintenance_mode_inside_after', 'mce_social_network' );
+add_action( 't_em_action_site_info_right', 'mce_social_network' );
 ?>

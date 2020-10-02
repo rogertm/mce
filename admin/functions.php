@@ -101,4 +101,57 @@ function mce_theme_options_validate( $input ){
 	return $input;
 }
 // add_filter( 't_em_admin_filter_theme_options_validate', 'mce_theme_options_validate' );
+
+/**
+ * Add social networks options
+ */
+function mce_social_network_options(){
+	$social = array(
+		'twitter_set' => array(
+			'name' => 'twitter_set',
+			'label' => __( 'Twitter URL', 't_em' ),
+			'item' => __( 'Twitter', 't_em' ),
+			'svg' 	=> 'twitter.svg',
+			'order' => '10',
+		),
+		'facebook_set' => array(
+			'name' => 'facebook_set',
+			'label' => __( 'Facebook URL', 't_em' ),
+			'item' => __( 'Facebook', 't_em' ),
+			'svg' 	=> 'facebook.svg',
+			'order' => '20',
+		),
+		'whatsapp_set' => array(
+			'name' => 'whatsapp_set',
+			'label' => __( 'Whatsapp URL', 't_em' ),
+			'item' => __( 'Whatsapp', 't_em' ),
+			'svg' 	=> 'whatsapp.svg',
+			'order' => '30',
+		),
+		'telegram_set' => array(
+			'name' => 'telegram_set',
+			'label' => __( 'Telegram URL', 't_em' ),
+			'item' => __( 'Telegram', 't_em' ),
+			'svg' 	=> 'telegram.svg',
+			'order' => '40',
+		),
+		'youtube_set' => array(
+			'name' => 'youtube_set',
+			'label' => __( 'YouTube URL', 't_em' ),
+			'item' => __( 'YouTube', 't_em' ),
+			'svg' 	=> 'youtube.svg',
+			'order' => '50',
+		),
+		'instagram_set' => array(
+			'name' => 'instagram_set',
+			'label' => __( 'Instagram URL', 't_em' ),
+			'item' => __( 'Instagram', 't_em' ),
+			'svg' 	=> 'instagram.svg',
+			'order' => '60',
+		),
+	);
+
+	return $social;
+}
+add_filter( 't_em_admin_filter_social_network_options', 'mce_social_network_options' );
 ?>
